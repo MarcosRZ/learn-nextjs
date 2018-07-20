@@ -1,9 +1,10 @@
 import React from 'react';
+import withMainLayout from '../HOC/withMainLayout';
 
 const Index = () => (
   <div>
-    <p>Hello Next.js</p>
+    <p>Hola</p>
   </div>
 );
 
-export default Index;
+export default withMainLayout(Index);
