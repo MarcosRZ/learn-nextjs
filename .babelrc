@@ -1,0 +1,24 @@
+
+{
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "node": "8.11.2"
+          }
+        }
+      ]
+    ],
+    "plugins": [
+      "transform-react-jsx",
+      [
+        "transform-object-rest-spread",
+        {
+          "useBuiltIns": true
+        }
+      ],
+      "babel-plugin-inline-import",
+      "transform-exponentiation-operator"
+    ]
+  }
