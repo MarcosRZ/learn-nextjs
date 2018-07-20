@@ -1,0 +1,63 @@
+{
+  "name": "nextjs-start",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scrapts": {
+    "next": "next",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "cross-env NODE_ENV=dev nodemon -e js,graphql,json --exec babel-node src/index.js",
+    "start": "node .compiled/src/index.js",
+    "compile": "rm -rf .compiled && babel src --out-dir .compiled/src"
+  },
+  "scripts": {
+    "dev": "cross-env BABEL_DISABLE_CACHE=1 NODE_ENV=dev babel-node server.js",
+    "generateLocales": "cross-env NODE_ENV=dev babel-node generateLocales.js",
+    "build": "next build",
+    "deploy": "npm run buildCSS; cd .deploy; mupx deploy; cd ..",
+    "cleanCaches": "rm -rf .next && npm cache clean --force && rm -rf node_modules/.cache/* && npm i",
+    "startLocal": " NODE_ENV=production PORT=3005 babel-node server.js",
+    "start": " NODE_ENV=production PORT=80 babel-node server.js",
+    "devCSS": "stylus -u autoprefixer-stylus -w ./styles/main.styl -o ./static/main.css",
+    "buildCSS": "stylus -u autoprefixer-stylus ./styles/main.styl -o ./static/main.css",
+    "cleanCache": "rm -rf node_modules/.cache"
+  },
+  "quokka": {
+    "babel": true
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-cache-inmemory": "^1.2.5",
+    "apollo-client": "^2.0.0-rc.7",
+    "apollo-link-http": "^1.5.4",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "cookies-js": "^1.2.3",
+    "cross-env": "^5.2.0",
+    "graphql": "^0.13.2",
+    "graphql-tag": "^2.9.2",
+    "isomorphic-fetch": "^2.2.1",
+    "next": "^6.1.1",
+    "nprogress": "^0.2.0",
+    "react": "^16.4.1",
+    "react-apollo": "^2.1.9",
+    "react-dom": "^16.4.1",
+    "request": "^2.87.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-inline-import": "^3.0.0",
+    "babel-plugin-transform-exponentiation-operator": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^17.0.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.9.1",
+    "nodemon": "^1.18.3"
+  }
+}
