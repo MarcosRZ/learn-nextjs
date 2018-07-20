@@ -3,7 +3,8 @@ import withMainLayout from '../HOC/withMainLayout';
 
 const Index = () => (
   <div>
-    <p>Hola</p>
+    <h1>Home</h1>
+    <p>This is the <b>home</b> page</p>
   </div>
 );
 

@@ -1,8 +1,11 @@
 import React from 'react';
+import withMainLayout from '../HOC/withMainLayout';
 
-export default () => (
+const Timeline = () => (
   <div>
     <h1>Timeline</h1>
     <p>This is the <b>timeline</b> page</p>
   </div>
 );
+
+export default withMainLayout(Timeline);

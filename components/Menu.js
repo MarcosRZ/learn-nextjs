@@ -17,18 +17,23 @@ const menuStyle = {
 
 const options = [
   { label: 'Home', url: '/' },
-  { label: 'Timeline', url: '/' },
-  { label: 'Categories', url: '/' },
-  { label: 'About', url: '/' },
+  { label: 'Timeline', url: '/timeline' },
+  { label: 'Categories', url: '/categories' },
+  { label: 'About', url: '/about' },
 ];
 
 const Menu = () => (
   <div className="menu" style={menuStyle}>
-    {options.map(o => (
-      <Link key={o.label} href={o.url}>
-        <div className="menu-item" style={menuItemStyle}>{o.label}</div>
-      </Link>
-    ))}
+    {options.map((o) => {
+      console.log(o);
+      return (
+        <Link key={o.label} href={o.url}>
+          <div className="menu-item" style={menuItemStyle}>
+            {o.label}
+          </div>
+        </Link>
+      );
+    })}
   </div>
 );
 

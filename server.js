@@ -34,6 +34,9 @@ app.prepare().then(() => {
     //   handle(req, res, parsedUrl);
     // }
     const parsedUrl = parse(req.url, true);
+
+    console.log('Parsed URL: ', parsedUrl);
+
     const { pathname, query } = parsedUrl;
 
     if (pathname === '/a') {

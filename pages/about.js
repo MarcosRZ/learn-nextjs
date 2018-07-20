@@ -1,7 +1,11 @@
 import React from 'react';
+import withMainLayout from '../HOC/withMainLayout';
 
-export default () => (
+const About = () => (
   <div>
-    <p>This is the about page</p>
+    <h1>About</h1>
+    <p>This is the <b>about</b> page</p>
   </div>
 );
+
+export default withMainLayout(About);
