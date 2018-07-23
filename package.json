@@ -44,7 +44,8 @@
     "react": "^16.4.1",
     "react-apollo": "^2.1.9",
     "react-dom": "^16.4.1",
-    "request": "^2.87.0"
+    "request": "^2.87.0",
+    "url": "^0.11.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -56,8 +57,10 @@
     "babel-register": "^6.26.0",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^17.0.0",
+    "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-import": "^2.12.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-prettier": "^2.6.2",
     "eslint-plugin-react": "^7.9.1",
     "nodemon": "^1.18.3"
   }

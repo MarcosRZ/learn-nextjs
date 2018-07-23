@@ -2,6 +2,7 @@
 import { createServer } from 'http';
 import { parse } from 'url';
 import next from 'next';
+import Router from './routing/x-router';
 // import { processRoute } from './router/biRouter';
 // import handleImageRequest from './router/handleImageRequest';
 // import handleFileRequest from './router/handleFileRequest';
@@ -12,10 +13,16 @@ const port = parseInt(process.env.PORT, 10) || 3000;
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
 
-const handle = app.getRequestHandler();
-
 app.prepare().then(() => {
   createServer((req, res) => {
+    const parsedUrl = parse(req.url, true);
+
+    const { pathname, query } = parsedUrl;
+
+    const target = Router.processRoute(parsedUrl);
+
+    console.log('[SERVER]:> Target -> ', target);
+
     // const parsedUrl = parse(req.url, true);
     // const { pathname, query } = parsedUrl;
     // const routeResult = processRoute(pathname, query, null, { req, res });
@@ -33,21 +40,17 @@ app.prepare().then(() => {
     // } else if (routeResult !== false) {
     //   handle(req, res, parsedUrl);
     // }
-    const parsedUrl = parse(req.url, true);
 
-    console.log('Parsed URL: ', parsedUrl);
+    // console.log('Parsed URL: ', parsedUrl);
 
-    const { pathname, query } = parsedUrl;
-
-    if (pathname === '/a') {
-      app.render(req, res, '/b', query);
-    } else if (pathname === '/b') {
-      app.render(req, res, '/a', query);
-    } else {
-      handle(req, res, parsedUrl);
+    if (target) {
+      app.render(req, res, target.target, query);
     }
-  }).listen(port, (err) => {
+
+    app.getRequestHandler()(req, res, parsedUrl);
+
+  }).listen(port, err => {
     if (err) throw err;
-    console.log(`AulaDerma listening on http://localhost:${port}`);
+    console.log(`PIXEL SUSHI listening on http://localhost:${port}`);
   });
 });

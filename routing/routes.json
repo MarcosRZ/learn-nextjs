@@ -1,0 +1,37 @@
+[
+  {
+    "key": "home",
+    "pattern": "/",
+    "target": "/Home"
+  },
+  {
+    "key": "artists",
+    "pattern": "/artists",
+    "target": "/Artists"
+  },
+  {
+    "key": "artist",
+    "pattern": "/artist/[artistId]",
+    "target": "/Artist"
+  },
+  {
+    "key": "songs",
+    "pattern": "/artist/[artistId]/songs",
+    "target": "/Songs"
+  },
+  {
+    "key": "song",
+    "pattern": "/artist/[artistId]/song/[songId]",
+    "target": "/Song"
+  },
+  {
+    "key": "albums",
+    "pattern": "/artist/[artistId]/albums",
+    "target": "/Albums"
+  },
+  {
+    "key": "album",
+    "pattern": "/artist/[artistId]/album/[albumId]",
+    "target": "/Album"
+  }
+]
