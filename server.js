@@ -21,7 +21,7 @@ app.prepare().then(() => {
 
     const target = Router.processRoute(parsedUrl);
 
-    console.log('[SERVER]:> Target -> ', target);
+
 
     // const parsedUrl = parse(req.url, true);
     // const { pathname, query } = parsedUrl;
@@ -44,10 +44,13 @@ app.prepare().then(() => {
     // console.log('Parsed URL: ', parsedUrl);
 
     if (target) {
+      console.log('[SERVER]:> Target -> ', target, query);
       app.render(req, res, target.target, query);
+    } else {
+      console.info('No X Route for: ', pathname);
+      app.getRequestHandler()(req, res, parsedUrl);
     }
 
-    app.getRequestHandler()(req, res, parsedUrl);
 
   }).listen(port, err => {
     if (err) throw err;

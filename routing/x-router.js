@@ -1,4 +1,3 @@
-import { parse } from 'url';
 import routes from './routes.json';
 
 const paramRegexPattern = '([A-Za-z0-9-_#$~%]+)';
@@ -22,7 +21,7 @@ function parseRoutes() {
 
 const parsedRoutes = parseRoutes();
 
-console.log(parsedRoutes);
+console.log('PARSED ROUTES: ', parsedRoutes);
 
 function processRoute(parsedUrl) {
 
