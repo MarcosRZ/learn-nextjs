@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import Xlink from './core/Xlink';
 // import PropTypes from 'prop-types';
 
 const menuItemStyle = {
@@ -25,11 +25,11 @@ const options = [
 const Menu = () => (
   <div className="menu" style={menuStyle}>
     {options.map(o => (
-      <Link key={o.label} href={o.url}>
+      <Xlink key={o.label} href={o.url}>
         <div className="menu-item" style={menuItemStyle}>
           {o.label}
         </div>
-      </Link>
+      </Xlink>
     ))}
   </div>
 );

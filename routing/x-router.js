@@ -74,6 +74,12 @@ console.log('PARSED ROUTES: ', JSON.stringify(parsedRoutes));
 
 function processRoute(parsedUrl) {
 
+  if (process.browser) {
+    console.log('This is BROwSER');
+  } else {
+    console.log('THIS IS SERvER');
+  }
+
   const matched = parsedRoutes.filter(r => r.regex.test(parsedUrl.pathname));
 
   if (matched.length > 0) {
