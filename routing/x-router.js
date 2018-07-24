@@ -24,18 +24,9 @@ const parsedRoutes = parseRoutes();
 console.log('PARSED ROUTES: ', parsedRoutes);
 
 function processRoute(parsedUrl) {
-
   const matched = parsedRoutes.filter(r => r.regex.test(parsedUrl.pathname));
 
-  // if (!matched.length) {
-
-  //   console.error(`[X-ROUTER]:> No match for route ${parsedUrl.pathname}`);
-  // } 
-  // if (!matched.length) console.error(`[X-ROUTER]:> Route ${url} does not match! :(`);
-
-  // if (matched.length > 1) console.warn(`[X-ROUTER]:> Route ${url} matches more than one pattern! :S ${matched}`);
-
-  // console.info(`[X-ROUTER]:> ${url} Perfect match! :)`, matched[0]);
+  // TODO: Warn if more than one route matches the URL
 
   return matched[0];
 }
