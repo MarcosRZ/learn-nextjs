@@ -1,6 +1,7 @@
 [
   {
     "id": 1,
+    "slug": "pantera",
     "name": "Pantera",
     "genre": "Groove",
     "year": 1981,
@@ -24,6 +25,7 @@
   },
   {
     "id": 2,
+    "slug": "stone-sour",
     "name": "Stone Sour",
     "genre": "heavy metal",
     "year": 1992,
@@ -47,6 +49,7 @@
   },
   {
     "id": 3,
+    "slug": "black-label-society",
     "name": "Black Label Society",
     "genre": "Groove",
     "year": 1998,

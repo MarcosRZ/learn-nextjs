@@ -1,3 +1,4 @@
+import { parse } from 'url';
 import routes from './routes.json';
 
 const SEGMENT_TYPES = {
@@ -69,9 +70,15 @@ function parseRoutes() {
 
 const parsedRoutes = parseRoutes();
 
-function processRoute(parsedUrl) {
+function processRoute(url) {
 
-  const matched = parsedRoutes.filter(r => r.regex.test(parsedUrl));
+    const parsedUrl = parse(url, true);
+
+    console.log('parsed: ', parsedUrl);
+
+    const { pathname, query } = parsedUrl;
+
+  const matched = parsedRoutes.filter(r => r.regex.test(pathname));
 
   if (matched.length > 0) {
 
@@ -79,7 +86,7 @@ function processRoute(parsedUrl) {
 
     const routeResult = {
       ...selectedRoute,
-      params: extractParams(parsedUrl, selectedRoute.segments),
+      params: { ...query, ...extractParams(url, selectedRoute.segments)},
     };
 
     return routeResult;

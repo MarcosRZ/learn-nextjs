@@ -1,9 +1,8 @@
 import React, { PureComponent } from 'react';
 import Link from 'next/link';
 import Router from './xrouter';
-import PropTypes from 'prop-types';
 
-class Xlink extends PureComponent {
+class XLink extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {};
@@ -55,6 +54,6 @@ class Xlink extends PureComponent {
   }
 }
 
-Xlink.propTypes = {};
+XLink.propTypes = {};
 
-export default Xlink;
+export default XLink;

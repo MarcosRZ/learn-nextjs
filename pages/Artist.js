@@ -1,8 +1,6 @@
 import React from 'react';
 import withMainLayout from '../HOC/withMainLayout';
 
-
-
 const Artist = () => (
   <div>
     <h1>Artist</h1>

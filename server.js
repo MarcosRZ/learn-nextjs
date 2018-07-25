@@ -21,16 +21,20 @@ function logBootInfo() {
 
 app.prepare().then(() => {
   createServer((req, res) => {
-    const parsedUrl = parse(req.url, true);
+    // const parsedUrl = parse(req.url, true);
 
-    const { pathname, query } = parsedUrl;
+    // const { pathname, query } = parsedUrl;
 
-    const target = Router.processRoute(pathname);
+    console.log('Processing: ', req.url);
+
+    const target = Router.processRoute(req.url);
+
+    console.log(target);
 
     if (target) {
-      app.render(req, res, target.target, query);
+      app.render(req, res, target.target, target.params);
     } else {
-      app.getRequestHandler()(req, res, parsedUrl);
+      app.getRequestHandler()(req, res, req.url);
     }
   }).listen(port, err => {
     if (err) throw err;

@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import Xlink from '../routing/Xlink';
+import XLink from '../routing/xlink';
 // import PropTypes from 'prop-types';
 
 const menuItemStyle = {
@@ -26,11 +26,11 @@ const options = [
 const Menu = () => (
   <div className="menu" style={menuStyle}>
     {options.map(o => (
-      <Xlink key={o.label} href={o.url}>
+      <XLink key={o.label} href={o.url}>
         <div className="menu-item" style={menuItemStyle}>
           {o.label}
         </div>
-      </Xlink>
+      </XLink>
     ))}
   </div>
 );
