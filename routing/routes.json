@@ -15,23 +15,38 @@
     "target": "/Artist"
   },
   {
-    "key": "songs",
+    "key": "artist-songs",
     "pattern": "/artist/[artistId]/songs",
     "target": "/Songs"
   },
   {
-    "key": "song",
+    "key": "artist-song",
     "pattern": "/artist/[artistId]/song/[songId]",
     "target": "/Song"
   },
   {
-    "key": "albums",
+    "key": "artist-albums",
     "pattern": "/artist/[artistId]/albums",
     "target": "/Albums"
   },
   {
+    "key": "albums",
+    "pattern": "/albums",
+    "target": "/Songs"
+  },
+  {
+    "key": "songs",
+    "pattern": "/songs",
+    "target": "/Songs"
+  },
+  {
     "key": "album",
-    "pattern": "/artist/[artistId]/album/[albumId]",
+    "pattern": "/album/[albumId]",
     "target": "/Album"
+  },
+  {
+    "key": "song",
+    "pattern": "/song/[songId]",
+    "target": "/Song"
   }
 ]

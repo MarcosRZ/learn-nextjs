@@ -1,5 +1,6 @@
 import React from 'react';
-import Xlink from './core/Xlink';
+import Link from 'next/link';
+import Xlink from '../routing/Xlink';
 // import PropTypes from 'prop-types';
 
 const menuItemStyle = {
@@ -17,9 +18,9 @@ const menuStyle = {
 
 const options = [
   { label: 'Home', url: '/' },
-  { label: 'Artists', url: '/Artists' },
-  { label: 'Songs', url: '/Songs' },
-  { label: 'Albums', url: '/Albums' },
+  { label: 'Artists', url: '/artists' },
+  { label: 'Songs', url: '/songs' },
+  { label: 'Albums', url: '/albums' },
 ];
 
 const Menu = () => (

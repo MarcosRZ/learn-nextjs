@@ -1,13 +1,19 @@
 import React, { PureComponent } from 'react';
 import Link from 'next/link';
-import Router from '../../routing/x-router';
+import Router from './xrouter';
 import PropTypes from 'prop-types';
 
 class Xlink extends PureComponent {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
   render() {
     const { children, href, prefetch, ...otherProps } = this.props;
 
     try {
+
       if (href) {
         const selectedRoute = Router.processRoute(href);
 
@@ -42,6 +48,8 @@ class Xlink extends PureComponent {
         ? children
         : React.cloneElement(children, { ...otherProps, href });
     } catch (err) {
+
+      console.error('X Router error: ', err.message)
       return React.cloneElement(children, { ...otherProps, href: '/es/error' });
     }
   }

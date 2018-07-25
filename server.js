@@ -2,7 +2,7 @@
 import { createServer } from 'http';
 import { parse } from 'url';
 import next from 'next';
-import Router from './routing/x-router';
+import Router from './routing/xrouter';
 import { APP_NAME, APP_AUTHOR, AUTHOR_GITHUB } from './config/app';
 
 const port = parseInt(process.env.PORT, 10) || 3000;
@@ -25,10 +25,9 @@ app.prepare().then(() => {
 
     const { pathname, query } = parsedUrl;
 
-    const target = Router.processRoute(parsedUrl);
+    const target = Router.processRoute(pathname);
 
     if (target) {
-      console.log('[SERVER]:> Target -> ', JSON.stringify(target), JSON.stringify(query));
       app.render(req, res, target.target, query);
     } else {
       app.getRequestHandler()(req, res, parsedUrl);

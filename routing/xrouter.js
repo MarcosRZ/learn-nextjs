@@ -46,7 +46,6 @@ function getSegmentsFromPattern(pattern) {
 function extractParams(url, segments) {
   const params = {};
 
-  console.log('URL', url);
   const urlSegments = url.split('/').filter(token => token.length > 0);
 
   const paramSegments = segments.filter(
@@ -70,17 +69,9 @@ function parseRoutes() {
 
 const parsedRoutes = parseRoutes();
 
-console.log('PARSED ROUTES: ', JSON.stringify(parsedRoutes));
-
 function processRoute(parsedUrl) {
 
-  if (process.browser) {
-    console.log('This is BROwSER');
-  } else {
-    console.log('THIS IS SERvER');
-  }
-
-  const matched = parsedRoutes.filter(r => r.regex.test(parsedUrl.pathname));
+  const matched = parsedRoutes.filter(r => r.regex.test(parsedUrl));
 
   if (matched.length > 0) {
 
@@ -88,7 +79,7 @@ function processRoute(parsedUrl) {
 
     const routeResult = {
       ...selectedRoute,
-      params: extractParams(parsedUrl.pathname, selectedRoute.segments),
+      params: extractParams(parsedUrl, selectedRoute.segments),
     };
 
     return routeResult;

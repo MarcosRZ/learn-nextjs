@@ -1,15 +1,6 @@
 
 {
-    "presets": [
-      [
-        "env",
-        {
-          "targets": {
-            "node": "8.11.2"
-          }
-        }
-      ]
-    ],
+    "presets": ["env","react"],
     "plugins": [
       "transform-react-jsx",
       [
@@ -21,4 +12,4 @@
       "babel-plugin-inline-import",
       "transform-exponentiation-operator"
     ]
-  }
+  } 
