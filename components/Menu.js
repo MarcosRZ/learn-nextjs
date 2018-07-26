@@ -1,38 +1,39 @@
 import React from 'react';
+import Xlink from '../routing/xlink';
 import Link from 'next/link';
-import XLink from '../routing/xlink';
-// import PropTypes from 'prop-types';
-
-const menuItemStyle = {
-  border: '1px solid blue',
-  padding: '10px',
-  margin: '5px',
-  cursor: 'pointer',
-};
-
-const menuStyle = {
-  display: 'flex',
-  justifyContent: 'center',
-  cursor: 'pointer',
-};
-
-const options = [
-  { label: 'Home', url: '/' },
-  { label: 'Artists', url: '/artists' },
-  { label: 'Songs', url: '/songs' },
-  { label: 'Albums', url: '/albums' },
-];
 
 const Menu = () => (
-  <div className="menu" style={menuStyle}>
-    {options.map(o => (
-      <XLink key={o.label} href={o.url}>
-        <div className="menu-item" style={menuItemStyle}>
-          {o.label}
-        </div>
-      </XLink>
-    ))}
-  </div>
+  <nav id="menu">
+    <div className="inner">
+      <h2>Menu</h2>
+      <ul className="links">
+        <li>
+          <Xlink href="/">
+            <a>Home</a>
+          </Xlink>
+        </li>
+        <li>
+          <Xlink href="/generic">
+            <a>Generic</a>
+          </Xlink>
+        </li>
+        <li>
+          <Xlink href="/elements">
+            <a>Elements</a>
+          </Xlink>
+        </li>
+        <li>
+          <a href="#">Log In</a>
+        </li>
+        <li>
+          <a href="#">Sign Up</a>
+        </li>
+      </ul>
+      <a href="#" className="close">
+        Close
+      </a>
+    </div>
+  </nav>
 );
 
 Menu.propTypes = {};

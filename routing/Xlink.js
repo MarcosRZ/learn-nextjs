@@ -26,7 +26,7 @@ class XLink extends PureComponent {
               pathname: selectedRoute ? selectedRoute.target : href,
               query: {
                 data: selectedRoute
-                  ? JSON.stringify(selectedRoute.query)
+                  ? JSON.stringify(selectedRoute.params)
                   : null,
               },
             }}

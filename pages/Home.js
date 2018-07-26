@@ -1,51 +1,25 @@
 import React from 'react';
 import withMainLayout from '../HOC/withMainLayout';
+import Xlink from '../routing/xlink';
+import Header from '../components/Header';
+import Menu from '../components/Menu';
 
 const Home = () => (
   <div>
     <div id="page-wrapper">
-      <header id="header" className="alt">
-        <h1>
-          <a href="index.html">Solid State</a>
-        </h1>
-        <nav><a href="#menu">Menu</a></nav>
-      </header>
+      <Header />
 
-      <nav id="menu">
-        <div className="inner">
-          <h2>Menu</h2>
-          <ul className="links">
-            <li>
-              <a href="index.html">Home</a>
-            </li>
-            <li>
-              <a href="generic.html">Generic</a>
-            </li>
-            <li>
-              <a href="elements.html">Elements</a>
-            </li>
-            <li>
-              <a href="#">Log In</a>
-            </li>
-            <li>
-              <a href="#">Sign Up</a>
-            </li>
-          </ul>
-          <a href="#" className="close">
-            Close
-          </a>
-        </div>
-      </nav>
+      <Menu />
 
       <section id="banner">
         <div className="inner">
-          <div className="logo">
+          {/* <div className="logo">
             <span className="icon fa-diamond" />
-          </div>
-          <h2>This is Solid State</h2>
+          </div> */}
+          <h2>Awesome title</h2>
           <p>
-            Another free + fully responsive site template by{' '}
-            <a href="http://html5up.net">HTML5 UP</a>
+            Subtitle with some awesome-as-fuck content{' '}
+            <a href="http://html5up.net">HERE</a>
           </p>
         </div>
       </section>
@@ -59,7 +33,7 @@ const Home = () => (
             <div className="content">
               <h2 className="major">Magna arcu feugiat</h2>
               <p>
-                Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras
+                1 Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras
                 turpis ante, nullam sit amet turpis non, sollicitudin posuere
                 urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim
                 dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla
@@ -80,7 +54,7 @@ const Home = () => (
             <div className="content">
               <h2 className="major">Tempus adipiscing</h2>
               <p>
-                Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras
+                2 Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras
                 turpis ante, nullam sit amet turpis non, sollicitudin posuere
                 urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim
                 dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla
@@ -96,12 +70,12 @@ const Home = () => (
         <section id="three" className="wrapper spotlight style3">
           <div className="inner">
             <a href="#" className="image">
-              <img src="static/images/pic03.jpg" alt="" />
+              <img src="/static/images/pic03.jpg" alt="" />
             </a>
             <div className="content">
               <h2 className="major">Nullam dignissim</h2>
               <p>
-                Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras
+                3 Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras
                 turpis ante, nullam sit amet turpis non, sollicitudin posuere
                 urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim
                 dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla

@@ -8,7 +8,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "cross-env NODE_ENV=dev nodemon -e js,graphql,json --exec babel-node src/index.js",
     "start": "node .compiled/src/index.js",
-    "compile": "rm -rf .compiled && babel src --out-dir .compiled/src"
+    "compile": "rm -rf .compiled && babel src --out-dir .compiled/src",
+    "buildCSS": "stylus -u autoprefixer-stylus ./styles/main.styl -o ./static/main.css",
+    "devCSS": "stylus -u autoprefixer-stylus -w ./styles/main.styl -o ./static/main.css"
   },
   "scripts": {
     "dev": "cross-env BABEL_DISABLE_CACHE=1 NODE_ENV=dev babel-node server.js",
@@ -18,9 +20,8 @@
     "cleanCaches": "rm -rf .next && npm cache clean --force && rm -rf node_modules/.cache/* && npm i",
     "startLocal": " NODE_ENV=production PORT=3005 babel-node server.js",
     "start": " NODE_ENV=production PORT=80 babel-node server.js",
-    "devCSS": "stylus -u autoprefixer-stylus -w ./styles/main.styl -o ./static/main.css",
-    "buildCSS": "stylus -u autoprefixer-stylus ./styles/main.styl -o ./static/main.css",
-    "cleanCache": "rm -rf node_modules/.cache"
+    "cleanCache": "rm -rf node_modules/.cache",
+    "buildCSS": "sass static/sass/main.scss static/css/main.css"
   },
   "quokka": {
     "babel": true

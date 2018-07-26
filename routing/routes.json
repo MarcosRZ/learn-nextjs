@@ -5,48 +5,13 @@
     "target": "/Home"
   },
   {
-    "key": "artists",
-    "pattern": "/artists",
-    "target": "/Artists"
+    "key": "generic",
+    "pattern": "/generic",
+    "target": "/Generic"
   },
   {
-    "key": "artist",
-    "pattern": "/artist/[artistId]",
-    "target": "/Artist"
-  },
-  {
-    "key": "artist-songs",
-    "pattern": "/artist/[artistId]/songs",
-    "target": "/Songs"
-  },
-  {
-    "key": "artist-song",
-    "pattern": "/artist/[artistId]/song/[songId]",
-    "target": "/Song"
-  },
-  {
-    "key": "artist-albums",
-    "pattern": "/artist/[artistId]/albums",
-    "target": "/Albums"
-  },
-  {
-    "key": "albums",
-    "pattern": "/albums",
-    "target": "/Songs"
-  },
-  {
-    "key": "songs",
-    "pattern": "/songs",
-    "target": "/Songs"
-  },
-  {
-    "key": "album",
-    "pattern": "/album/[albumId]",
-    "target": "/Album"
-  },
-  {
-    "key": "song",
-    "pattern": "/song/[songId]",
-    "target": "/Song"
+    "key": "elements",
+    "pattern": "/elements",
+    "target": "/Elements"
   }
 ]
