@@ -9,11 +9,13 @@ class MainLayout extends PureComponent {
     return (
       <div className="main-layout">
         <Head>
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, user-scalable=no"
+          />
           <meta charSet="utf-8" />
           <title>P1x3L SuSH1</title>
           <link rel="stylesheet" type="text/css" href="/static/css/main.css" />
-          
         </Head>
         {children}
       </div>
