@@ -109,7 +109,7 @@
 		}
 	}
 
-	body.is-menu-visible {
+	#main-layout.is-menu-visible {
 		#page-wrapper {
 			@include vendor('filter', 'blur(1.5px)');
 		}

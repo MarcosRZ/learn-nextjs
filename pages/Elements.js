@@ -1,15 +1,9 @@
 import React from 'react';
 import withMainLayout from '../HOC/withMainLayout';
-import Header from '../components/Header';
-import Menu from '../components/Menu';
 
 const Generic = () => (
   <div>
     <div id="page-wrapper">
-      <Header />
-
-      <Menu />
-
       <section id="wrapper">
         <header>
           <div className="inner">

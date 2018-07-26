@@ -2690,18 +2690,18 @@ button,
   }
 }
 
-body.is-menu-visible #page-wrapper {
+#main-layout.is-menu-visible #page-wrapper {
   -moz-filter: blur(1.5px);
   -webkit-filter: blur(1.5px);
   -ms-filter: blur(1.5px);
   filter: blur(1.5px);
 }
-body.is-menu-visible #menu {
+#main-layout.is-menu-visible #menu {
   pointer-events: auto;
   opacity: 1;
   visibility: visible;
 }
-body.is-menu-visible #menu .inner {
+#main-layout.is-menu-visible #menu .inner {
   -moz-transform: translateY(0);
   -webkit-transform: translateY(0);
   -ms-transform: translateY(0);

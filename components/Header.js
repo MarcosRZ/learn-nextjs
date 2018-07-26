@@ -1,13 +1,15 @@
 import React from 'react';
 
-const Header = () => {
+const Header = props => {
   return (
     <header id="header" className="alt">
       <h1>
         <a href="/">Solid State</a>
       </h1>
       <nav>
-        <a href="#menu">Menu</a>
+        <div onClick={props.handleMenuClick}>
+          Menu
+        </div>
       </nav>
     </header>
   );

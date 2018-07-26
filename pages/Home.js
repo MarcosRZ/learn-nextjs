@@ -1,16 +1,11 @@
 import React from 'react';
 import withMainLayout from '../HOC/withMainLayout';
 import Xlink from '../routing/Xlink';
-import Header from '../components/Header';
-import Menu from '../components/Menu';
 
 const Home = () => (
   <div>
     <div id="page-wrapper">
-      <Header />
-
-      <Menu />
-
+      
       <section id="banner">
         <div className="inner">
           {/* <div className="logo">
@@ -19,7 +14,7 @@ const Home = () => (
           <h2>Awesome title</h2>
           <p>
             Subtitle with some awesome-as-fuck content{' '}
-            <a href="http://html5up.net">HERE</a>
+            <Xlink href='/generic'><div>HERE</div></Xlink>
           </p>
         </div>
       </section>
