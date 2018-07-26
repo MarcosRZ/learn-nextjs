@@ -30,9 +30,12 @@
 
 // Font.
 	$font: (
-		family:					('Source Sans Pro', Helvetica, sans-serif),
-		family-fixed:			('Courier New', monospace),
-		family-heading:			(Raleway, Helvetica, sans-serif),
+		// family:					('Source Sans Pro', Helvetica, sans-serif),
+		// family-fixed:			('Courier New', monospace),
+		// family-heading:			(Raleway, Helvetica, sans-serif),
+		family:					('Karma', Helvetica, sans-serif),
+		family-fixed:			('Ubuntu Mono', monospace),
+		family-heading:			('Ubuntu', Helvetica, sans-serif),
 		weight:					300,
 		weight-bold:			600,
 		weight-heading:			200,
