@@ -1,5 +1,5 @@
 import React from 'react';
-import Xlink from '../routing/xlink';
+import Xlink from '../routing/Xlink';
 import Link from 'next/link';
 
 const Menu = () => (
@@ -9,17 +9,17 @@ const Menu = () => (
       <ul className="links">
         <li>
           <Xlink href="/">
-            <a>Home</a>
+            <div>Home</div>
           </Xlink>
-        </li>
+        </li> 
         <li>
           <Xlink href="/generic">
-            <a>Generic</a>
+            <div>Generic</div>
           </Xlink>
         </li>
         <li>
           <Xlink href="/elements">
-            <a>Elements</a>
+            <div>Elements</div>
           </Xlink>
         </li>
         <li>

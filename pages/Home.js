@@ -1,6 +1,6 @@
 import React from 'react';
 import withMainLayout from '../HOC/withMainLayout';
-import Xlink from '../routing/xlink';
+import Xlink from '../routing/Xlink';
 import Header from '../components/Header';
 import Menu from '../components/Menu';
 
