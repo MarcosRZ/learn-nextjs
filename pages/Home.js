@@ -54,7 +54,7 @@ const Home = () => (
         <section id="one" className="wrapper spotlight style1">
           <div className="inner">
             <a href="#" className="image">
-              <img src="images/pic01.jpg" alt="" />
+              <img src="static/images/pic01.jpg" alt="" />
             </a>
             <div className="content">
               <h2 className="major">Magna arcu feugiat</h2>
@@ -75,7 +75,7 @@ const Home = () => (
         <section id="two" className="wrapper alt spotlight style2">
           <div className="inner">
             <a href="#" className="image">
-              <img src="images/pic02.jpg" alt="" />
+              <img src="static/images/pic02.jpg" alt="" />
             </a>
             <div className="content">
               <h2 className="major">Tempus adipiscing</h2>
@@ -96,7 +96,7 @@ const Home = () => (
         <section id="three" className="wrapper spotlight style3">
           <div className="inner">
             <a href="#" className="image">
-              <img src="images/pic03.jpg" alt="" />
+              <img src="static/images/pic03.jpg" alt="" />
             </a>
             <div className="content">
               <h2 className="major">Nullam dignissim</h2>
@@ -126,7 +126,7 @@ const Home = () => (
             <section className="features">
               <article>
                 <a href="#" className="image">
-                  <img src="images/pic04.jpg" alt="" />
+                  <img src="static/images/pic04.jpg" alt="" />
                 </a>
                 <h3 className="major">Sed feugiat lorem</h3>
                 <p>
@@ -139,7 +139,7 @@ const Home = () => (
               </article>
               <article>
                 <a href="#" className="image">
-                  <img src="images/pic05.jpg" alt="" />
+                  <img src="static/images/pic05.jpg" alt="" />
                 </a>
                 <h3 className="major">Nisl placerat</h3>
                 <p>
@@ -152,7 +152,7 @@ const Home = () => (
               </article>
               <article>
                 <a href="#" className="image">
-                  <img src="images/pic06.jpg" alt="" />
+                  <img src="static/images/pic06.jpg" alt="" />
                 </a>
                 <h3 className="major">Ante fermentum</h3>
                 <p>
@@ -165,7 +165,7 @@ const Home = () => (
               </article>
               <article>
                 <a href="#" className="image">
-                  <img src="images/pic07.jpg" alt="" />
+                  <img src="static/images/pic07.jpg" alt="" />
                 </a>
                 <h3 className="major">Fusce consequat</h3>
                 <p>

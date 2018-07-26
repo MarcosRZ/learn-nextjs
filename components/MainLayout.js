@@ -13,6 +13,7 @@ class MainLayout extends PureComponent {
           <meta charSet="utf-8" />
           <title>P1x3L SuSH1</title>
           <link rel="stylesheet" type="text/css" href="/static/css/main.css" />
+          
         </Head>
         {children}
       </div>
