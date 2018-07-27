@@ -2497,7 +2497,7 @@ button,
   float: right;
   margin-left: 0.75em;
 }
-#header nav a[href="#menu"] {
+#header nav a[data-behaviour=menu-button] {
   text-decoration: none;
   -moz-transition: background-color 0.2s ease-in-out;
   -webkit-transition: background-color 0.2s ease-in-out;
@@ -2506,8 +2506,9 @@ button,
   border-radius: 5px;
   box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.125);
   padding: 0 1.35em;
+  cursor: pointer;
 }
-#header nav a[href="#menu"]:before {
+#header nav a[data-behaviour=menu-button]:before {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-family: FontAwesome;
@@ -2515,13 +2516,13 @@ button,
   font-weight: normal;
   text-transform: none !important;
 }
-#header nav a[href="#menu"]:before {
+#header nav a[data-behaviour=menu-button]:before {
   content: "";
 }
-#header nav a[href="#menu"]:hover {
+#header nav a[data-behaviour=menu-button]:hover {
   background-color: rgba(255, 255, 255, 0.025);
 }
-#header nav a[href="#menu"]:active {
+#header nav a[data-behaviour=menu-button]:active {
   background-color: rgba(255, 255, 255, 0.075);
 }
 #header.alt {
@@ -2546,23 +2547,23 @@ button,
     height: inherit;
     line-height: inherit;
   }
-  #header nav a[href="#menu"] {
+  #header nav a[data-behaviour=menu-button] {
     box-shadow: none;
     padding: 0 1em;
     border-radius: 0;
   }
-  #header nav a[href="#menu"]:hover, #header nav a[href="#menu"]:active {
+  #header nav a[data-behaviour=menu-button]:hover, #header nav a[data-behaviour=menu-button]:active {
     background-color: inherit;
   }
 }
 @media screen and (max-width: 480px) {
-  #header nav a[href="#menu"] {
+  #header nav a[data-behaviour=menu-button] {
     width: 4em;
     white-space: nowrap;
     text-indent: 4em;
     position: relative;
   }
-  #header nav a[href="#menu"]:before {
+  #header nav a[data-behaviour=menu-button]:before {
     width: inherit;
     position: absolute;
     top: 0;
@@ -2615,6 +2616,7 @@ button,
   top: 0;
   visibility: hidden;
   width: 100%;
+  z-index: 99;
 }
 #menu .inner {
   padding: 2.5em 1.5em 0.5em 1.5em;
@@ -2634,6 +2636,7 @@ button,
   opacity: 0;
   position: relative;
   width: 18em;
+  z-index: 88;
 }
 #menu h2 {
   border-bottom: solid 2px rgba(255, 255, 255, 0.125);
@@ -2655,6 +2658,7 @@ button,
   text-indent: 4em;
   top: 0;
   width: 4em;
+  cursor: pointer;
 }
 #menu .links {
   list-style: none;

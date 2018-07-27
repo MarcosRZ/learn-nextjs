@@ -16,7 +16,7 @@ class MainLayout extends PureComponent {
 
   toggleMenuVisibility() {
     console.log('SET MENU VISIBILITY');
-    this.setState((prevState) => ({showMenu: !prevState.showMenu}));
+    this.setState(prevState => ({ showMenu: !prevState.showMenu }));
   }
 
   render() {
@@ -40,7 +40,7 @@ class MainLayout extends PureComponent {
 
         <Header handleMenuClick={this.toggleMenuVisibility} />
 
-        <Menu />
+        <Menu handleCloseClick={this.toggleMenuVisibility} />
 
         {children}
       </div>

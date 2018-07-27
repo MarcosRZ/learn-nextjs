@@ -1,29 +1,24 @@
 import React from 'react';
 import Xlink from '../routing/Xlink';
 
-const Menu = () => (
+const Menu = (props) => (
   <nav id="menu">
     <div className="inner">
       <h2>Menu</h2>
       <ul className="links">
         <li>
           <Xlink href='/'>
-            <div>Home</div>
-          </Xlink>
-        </li> 
-        <li>
-          <Xlink href='/'>
-            <div>Home</div>
+            <a>Home</a>
           </Xlink>
         </li> 
         <li>
           <Xlink href='/generic'>
-            <div>Generic</div>
+            <a>Generic</a>
           </Xlink>
         </li>
         <li>
           <Xlink href='/elements'>
-            <div>Elements</div>
+            <a>Elements</a>
           </Xlink>
         </li>
         <li>
@@ -33,7 +28,7 @@ const Menu = () => (
           <a href="#">Sign Up</a>
         </li>
       </ul>
-      <a href="#" className="close">
+      <a role="presentation" className="close" onClick={props.handleCloseClick}>
         Close
       </a>
     </div>
