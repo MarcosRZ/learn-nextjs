@@ -7,7 +7,7 @@
 (function($) {
 
 	var	$window = $(window),
-		$body = $('body'),
+		$body = $('#main-layout'),
 		$header = $('#header'),
 		$banner = $('#banner');
 
@@ -21,11 +21,11 @@
 		});
 
 	// Play initial animations on page load.
-		$window.on('load', function() {
-			window.setTimeout(function() {
-				$body.removeClass('is-preload');
-			}, 100);
-		});
+		// $window.on('load', function() {
+		// 	window.setTimeout(function() {
+		// 		$body.removeClass('is-preload');
+		// 	}, 100);
+		// });
 
 	// Header.
 		if ($banner.length > 0

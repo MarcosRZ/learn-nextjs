@@ -1,30 +1,42 @@
 import React, { PureComponent } from 'react';
 import Head from 'next/head';
 import PropTypes from 'prop-types';
-import Xlink from '../routing/Xlink';
 import Header from './Header';
 import Menu from './Menu';
+
+const SHOW_BANNER_DELAY_MS = 100;
 
 class MainLayout extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
       showMenu: false,
+      isPreload: true,
     };
     this.toggleMenuVisibility = this.toggleMenuVisibility.bind(this);
+    this.startAnimations = this.startAnimations.bind(this);
+  }
+
+  componentDidMount() {
+    setTimeout(this.startAnimations, SHOW_BANNER_DELAY_MS);
+  }
+
+  startAnimations() {
+    this.setState({ isPreload: false });
   }
 
   toggleMenuVisibility() {
-    console.log('SET MENU VISIBILITY');
     this.setState(prevState => ({ showMenu: !prevState.showMenu }));
   }
 
   render() {
     const { children } = this.props;
 
-    const { showMenu } = this.state;
+    const { showMenu, isPreload } = this.state;
 
-    const menuClass = showMenu ? 'is-menu-visible' : '';
+    const menuClass = `${showMenu ? 'is-menu-visible' : ''} ${
+      isPreload ? 'is-preload' : ''
+    }`;
 
     return (
       <div id="main-layout" className={`main-layout ${menuClass}`}>

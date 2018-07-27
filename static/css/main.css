@@ -100,7 +100,8 @@ body {
   background-attachment: fixed, fixed;
   background-position: center, center;
 }
-body.is-preload *, body.is-preload *:before, body.is-preload *:after {
+
+#main-layout.is-preload *, #main-layout.is-preload *:before, #main-layout.is-preload *:after {
   -moz-animation: none !important;
   -webkit-animation: none !important;
   -ms-animation: none !important;
@@ -2829,14 +2830,14 @@ button,
     font-size: 0.8em;
   }
 }
-body.is-preload #banner .logo {
+#main-layout.is-preload #banner .logo {
   -moz-transform: translateY(0.5em);
   -webkit-transform: translateY(0.5em);
   -ms-transform: translateY(0.5em);
   transform: translateY(0.5em);
   opacity: 0;
 }
-body.is-preload #banner h2 {
+#main-layout.is-preload #banner h2 {
   opacity: 0;
   -moz-transform: translateX(0.25em);
   -webkit-transform: translateX(0.25em);
@@ -2847,7 +2848,7 @@ body.is-preload #banner h2 {
   -ms-filter: blur(2px);
   filter: blur(2px);
 }
-body.is-preload #banner p {
+#main-layout.is-preload #banner p {
   opacity: 0;
   -moz-transform: translateX(0.5em);
   -webkit-transform: translateX(0.5em);
