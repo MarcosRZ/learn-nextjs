@@ -2447,6 +2447,10 @@ button,
   }
 }
 
+.link {
+  cursor: pointer;
+}
+
 /* Header */
 #header {
   -moz-transition: background-color 0.2s ease-in-out;

@@ -14,7 +14,7 @@ const Home = () => (
           <h2>Awesome title</h2>
           <p>
             Subtitle with some awesome-as-fuck content{' '}
-            <Xlink href='/generic'><div>HERE</div></Xlink>
+            <Xlink href='/generic'><span className="link">HERE</span></Xlink>
           </p>
         </div>
       </section>
@@ -28,6 +28,31 @@ const Home = () => (
             <div className="content">
               <h2 className="major">Magna arcu feugiat</h2>
               <p>
+                1 Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras
+                turpis ante, nullam sit amet turpis non, sollicitudin posuere
+                urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim
+                dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla
+                cursus.
+                1 Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras
+                turpis ante, nullam sit amet turpis non, sollicitudin posuere
+                urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim
+                dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla
+                cursus.
+                1 Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras
+                turpis ante, nullam sit amet turpis non, sollicitudin posuere
+                urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim
+                dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla
+                cursus.
+                1 Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras
+                turpis ante, nullam sit amet turpis non, sollicitudin posuere
+                urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim
+                dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla
+                cursus.
+                1 Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras
+                turpis ante, nullam sit amet turpis non, sollicitudin posuere
+                urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim
+                dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla
+                cursus.
                 1 Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras
                 turpis ante, nullam sit amet turpis non, sollicitudin posuere
                 urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim
@@ -114,6 +139,16 @@ const Home = () => (
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id
                   nulla dignissim dapibus ultrices.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id
+                  nulla dignissim dapibus ultrices.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id
+                  nulla dignissim dapibus ultrices.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id
+                  nulla dignissim dapibus ultrices.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id
+                  nulla dignissim dapibus ultrices.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id
+                  nulla dignissim dapibus ultrices.
                 </p>
                 <a href="#" className="special">
                   Learn more
@@ -125,6 +160,10 @@ const Home = () => (
                 </a>
                 <h3 className="major">Ante fermentum</h3>
                 <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id
+                  nulla dignissim dapibus ultrices.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id
+                  nulla dignissim dapibus ultrices.
                   Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id
                   nulla dignissim dapibus ultrices.
                 </p>
