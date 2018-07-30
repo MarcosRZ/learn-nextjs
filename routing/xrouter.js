@@ -72,22 +72,13 @@ const parsedRoutes = parseRoutes();
 
 function processRoute(url) {
 
-    if (process.browser) {
-      console.log('CLIENT SIDE');
-    }else {
-      console.log('SERVER SIDE');
-    }
     const parsedUrl = parse(url, true);
-
-    console.log('parsed: ', parsedUrl);
 
     const { pathname, query } = parsedUrl;
 
   const matched = parsedRoutes.filter(r => r.regex.test(pathname));
 
   if (matched.length > 0) {
-
-    console.log(`Match found for [${url}]`);
 
     const selectedRoute = matched[0];
 
@@ -99,7 +90,6 @@ function processRoute(url) {
     return routeResult;
   }
 
-  console.error(`NO MATCH for [${url}]`);
   // No match, Sad tinder panda 8( -> Hope NextJS will handle it...
   return null;
 }

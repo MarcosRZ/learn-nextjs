@@ -5,20 +5,42 @@ import Header from './Header';
 import Menu from './Menu';
 
 const SHOW_BANNER_DELAY_MS = 100;
+const SHOW_MENU_OFFSET_PX = 100;
 
 class MainLayout extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
+      showHeader: false,
       showMenu: false,
       isPreload: true,
     };
     this.toggleMenuVisibility = this.toggleMenuVisibility.bind(this);
     this.startAnimations = this.startAnimations.bind(this);
+    this.onScroll = this.onScroll.bind(this);
   }
 
   componentDidMount() {
     setTimeout(this.startAnimations, SHOW_BANNER_DELAY_MS);
+    window.addEventListener('scroll', this.onScroll, true);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.onScroll);
+  }
+
+  onScroll(event) {
+    const {
+      target: { scrollTop: px },
+    } = event;
+
+    const { showHeader } = this.state;
+
+    if ( showHeader && px > SHOW_MENU_OFFSET_PX) return;
+
+    if (!showHeader && px < SHOW_MENU_OFFSET_PX) return;
+
+    this.setState({ showHeader: px > SHOW_MENU_OFFSET_PX });
   }
 
   startAnimations() {
@@ -32,7 +54,7 @@ class MainLayout extends PureComponent {
   render() {
     const { children } = this.props;
 
-    const { showMenu, isPreload } = this.state;
+    const { showHeader, showMenu, isPreload } = this.state;
 
     const menuClass = `${showMenu ? 'is-menu-visible' : ''} ${
       isPreload ? 'is-preload' : ''
@@ -48,9 +70,10 @@ class MainLayout extends PureComponent {
           <meta charSet="utf-8" />
           <title>P1x3L SuSH1</title>
           <link rel="stylesheet" type="text/css" href="/static/css/main.css" />
+          <link rel='shortcut icon' type='image/x-icon' href='/static/images/sushi.png' />
         </Head>
 
-        <Header handleMenuClick={this.toggleMenuVisibility} />
+        <Header handleMenuClick={this.toggleMenuVisibility} className={showHeader ? '' : 'alt'} />
 
         <Menu handleCloseClick={this.toggleMenuVisibility} />
 

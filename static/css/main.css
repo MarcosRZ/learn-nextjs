@@ -87,6 +87,7 @@ body {
 }
 html {
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 *, *:before, *:after {
@@ -99,6 +100,7 @@ body {
   background-size: auto, cover;
   background-attachment: fixed, fixed;
   background-position: center, center;
+  overflow: hidden;
 }
 
 #main-layout.is-preload *, #main-layout.is-preload *:before, #main-layout.is-preload *:after {
@@ -3215,6 +3217,11 @@ button,
   .wrapper .inner {
     padding: 2em 1.5em 0.1em 1.5em;
   }
+}
+
+.main-layout {
+  height: 100vh;
+  overflow: auto;
 }
 
 /* Footer */
