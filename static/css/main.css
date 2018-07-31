@@ -2513,6 +2513,7 @@ button,
   border-radius: 5px;
   box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.125);
   padding: 0 1.35em;
+  margin-right: 17px;
   cursor: pointer;
 }
 #header nav a[data-behaviour=menu-button]:before {

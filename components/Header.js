@@ -13,6 +13,7 @@ class Header extends React.PureComponent {
         </h1>
         <nav>
           <a
+            className="menu-link"
             role="presentation"
             data-behaviour="menu-button"
             onClick={this.props.handleMenuClick}
