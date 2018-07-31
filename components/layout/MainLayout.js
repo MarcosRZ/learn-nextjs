@@ -3,6 +3,7 @@ import Head from 'next/head';
 import PropTypes from 'prop-types';
 import Header from './Header';
 import Menu from './Menu';
+import Footer from './Footer';
 
 const SHOW_BANNER_DELAY_MS = 100;
 const SHOW_MENU_OFFSET_PX = 100;
@@ -78,6 +79,15 @@ class MainLayout extends PureComponent {
         <Menu handleCloseClick={this.toggleMenuVisibility} />
 
         {children}
+
+        <Footer />
+
+        <script src="/static/js/jquery.min.js" />
+        <script src="/static/js/jquery.scrollex.min.js" />
+        <script src="/static/js/browser.min.js" />
+        <script src="/static/js/breakpoints.min.js" />
+        <script src="/static/js/util.js" />
+        <script src="/static/js/main.js" />
       </div>
     );
   }

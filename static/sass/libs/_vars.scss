@@ -44,8 +44,19 @@
 	);
 
 // Palette.
+	// $palette: (
+	// 	bg:						#292d2f,
+	// 	fg:						#ffffff,
+	// 	fg-bold:				#ffffff,
+	// 	fg-light:				rgba(255,255,255,0.35),
+	// 	border:					rgba(255,255,255,0.125),
+	// 	border-bg:				rgba(255,255,255,0.025),
+	// 	border2:				rgba(255,255,255,0.25),
+	// 	border2-bg:				rgba(255,255,255,0.075),
+	// 	accent:					#005b84,
+	// );
 	$palette: (
-		bg:						#292d2f,
+		bg:						#3f51b5,
 		fg:						#ffffff,
 		fg-bold:				#ffffff,
 		fg-light:				rgba(255,255,255,0.35),
@@ -53,5 +64,5 @@
 		border-bg:				rgba(255,255,255,0.025),
 		border2:				rgba(255,255,255,0.25),
 		border2-bg:				rgba(255,255,255,0.075),
-		accent:					#005b84,
+		accent:					#086cd4,
 	);
