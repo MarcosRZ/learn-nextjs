@@ -19,7 +19,7 @@ class Home extends React.PureComponent {
           <Banner />
 
           <section id="wrapper">
-            <Section className="spotlight style1">
+            <Section className="wrapper spotlight style1">
               <SectionSummary
                 title="Titulo Seccion 1"
                 content="Contenido"
@@ -36,7 +36,7 @@ class Home extends React.PureComponent {
               </SectionSummary>
             </Section>
 
-            <Section className="spotlight style2 alt">
+            <Section className="wrapper spotlight style2 alt">
               <SectionSummary
                 title="Titulo Seccion 2"
                 content="Contenido"
@@ -52,7 +52,7 @@ class Home extends React.PureComponent {
               </SectionSummary>
             </Section>
 
-            <Section className="spotlight style3">
+            <Section className="wrapper spotlight style3">
               <SectionSummary
                 title="Titulo Seccion 3"
                 content="Contenido"
@@ -68,7 +68,7 @@ class Home extends React.PureComponent {
               </SectionSummary>
             </Section>
 
-            <Section className="spotlight style2 alt">
+            <Section className="wrapper spotlight style2 alt">
               <SectionSummary
                 title="Titulo Seccion 3"
                 content="Contenido"
@@ -84,7 +84,7 @@ class Home extends React.PureComponent {
               </SectionSummary>
             </Section>
 
-            <Section className="style1">
+            <Section className="wrapper style1">
               <SectionHeading title="Vitae phasellus">
                 Cras mattis ante fermentum, malesuada neque vitae, eleifend
                 erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget

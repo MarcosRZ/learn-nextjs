@@ -1,23 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const SectionHeading = (props) => {
-
+const PageHeader = props => {
   const { title, children } = props;
-
   return (
-    <div>
-      <h2 className="major">{title}</h2>
-      <p>
+    <header>
+      <div className="inner">
+        <h2>{title}</h2>
         {children}
-      </p>
-    </div>
+      </div>
+    </header>
   );
 };
 
-SectionHeading.propTypes = {
+PageHeader.propTypes = {
   title: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,  
 };
 
-export default SectionHeading;
+export default PageHeader;

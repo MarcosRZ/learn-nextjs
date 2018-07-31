@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Cards = (props) => {
 
@@ -9,6 +10,10 @@ const Cards = (props) => {
       {children}
     </section>
   );
+};
+
+Cards.propTypes = {
+  children: PropTypes.node.isRequired,
 };
 
 export default Cards;
