@@ -1,18 +1,12 @@
 import React from 'react';
 import withMainLayout from '../HOC/withMainLayout';
 import Xlink from '../routing/Xlink';
+import Section from '../components/Section';
+import SectionSummary from '../components/SectionSummary';
 
 class Home extends React.PureComponent {
+  componentDidMount() {}
 
-  constructor(props) {
-    super(props);
-  }
-  
-
-  componentDidMount() {
-    
-  }
-  
   render() {
     return (
       <div>
@@ -31,9 +25,57 @@ class Home extends React.PureComponent {
               </p>
             </div>
           </section>
-  
+
           <section id="wrapper">
-            <section id="one" className="wrapper spotlight style1">
+            <Section className="style1">
+              <SectionSummary
+                title="Titulo Seccion 1"
+                content="Contenido"
+                imageUrl="static/images/pic01.jpg"
+                linkText="Ver sección"
+              >
+                1 Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras
+                turpis ante, nullam sit amet turpis non, sollicitudin posuere
+                urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim
+                dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla
+                cursus. 1 Lorem ipsum dolor sit amet, etiam lorem adipiscing
+                elit. Cras turpis ante, nullam sit amet turpis non, sollicitudin
+                posuere urna.
+              </SectionSummary>
+            </Section>
+
+            <Section className="style2 alt">
+              <SectionSummary
+                title="Titulo Seccion 2"
+                content="Contenido"
+                imageUrl="static/images/pic01.jpg"
+                linkText="Ver sección"
+                className="alt style2"
+              >
+                2 Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras
+                turpis ante, nullam sit amet turpis non, sollicitudin posuere
+                urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim
+                dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla
+                cursus.
+              </SectionSummary>
+            </Section>
+
+            <Section className="style3">
+              <SectionSummary
+                title="Titulo Seccion 3"
+                content="Contenido"
+                imageUrl="static/images/pic01.jpg"
+                linkText="Ver sección"
+                className="style3"
+              >
+                3 Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras
+                turpis ante, nullam sit amet turpis non, sollicitudin posuere
+                urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim
+                dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla
+                cursus.
+              </SectionSummary>
+            </Section>
+            {/* <section id="one" className="wrapper spotlight style1">
               <div className="inner">
                 <a href="#" className="image">
                   <img src="static/images/pic01.jpg" alt="" />
@@ -73,9 +115,9 @@ class Home extends React.PureComponent {
                   </a>
                 </div>
               </div>
-            </section>
-  
-            <section id="two" className="wrapper alt spotlight style2">
+            </section> */}
+
+            {/* <section id="two" className="wrapper alt spotlight style2">
               <div className="inner">
                 <a href="#" className="image">
                   <img src="static/images/pic02.jpg" alt="" />
@@ -86,8 +128,8 @@ class Home extends React.PureComponent {
                     2 Lorem ipsum dolor sit amet, etiam lorem adipiscing elit.
                     Cras turpis ante, nullam sit amet turpis non, sollicitudin
                     posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla
-                    dignissim dapibus. Nullam ultrices, neque et faucibus viverra,
-                    ex nulla cursus.
+                    dignissim dapibus. Nullam ultrices, neque et faucibus
+                    viverra, ex nulla cursus.
                   </p>
                   <a href="#" className="special">
                     Learn more
@@ -95,7 +137,7 @@ class Home extends React.PureComponent {
                 </div>
               </div>
             </section>
-  
+
             <section id="three" className="wrapper spotlight style3">
               <div className="inner">
                 <a href="#" className="image">
@@ -107,16 +149,16 @@ class Home extends React.PureComponent {
                     3 Lorem ipsum dolor sit amet, etiam lorem adipiscing elit.
                     Cras turpis ante, nullam sit amet turpis non, sollicitudin
                     posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla
-                    dignissim dapibus. Nullam ultrices, neque et faucibus viverra,
-                    ex nulla cursus.
+                    dignissim dapibus. Nullam ultrices, neque et faucibus
+                    viverra, ex nulla cursus.
                   </p>
                   <a href="#" className="special">
                     Learn more
                   </a>
                 </div>
               </div>
-            </section>
-  
+            </section> */}
+
             <section id="four" className="wrapper alt style1">
               <div className="inner">
                 <h2 className="major">Vitae phasellus</h2>
@@ -134,8 +176,8 @@ class Home extends React.PureComponent {
                     </a>
                     <h3 className="major">Sed feugiat lorem</h3>
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing vehicula
-                      id nulla dignissim dapibus ultrices.
+                      Lorem ipsum dolor sit amet, consectetur adipiscing
+                      vehicula id nulla dignissim dapibus ultrices.
                     </p>
                     <a href="#" className="special">
                       Learn more
@@ -147,16 +189,17 @@ class Home extends React.PureComponent {
                     </a>
                     <h3 className="major">Nisl placerat</h3>
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing vehicula
-                      id nulla dignissim dapibus ultrices. Lorem ipsum dolor sit
-                      amet, consectetur adipiscing vehicula id nulla dignissim
-                      dapibus ultrices. Lorem ipsum dolor sit amet, consectetur
+                      Lorem ipsum dolor sit amet, consectetur adipiscing
+                      vehicula id nulla dignissim dapibus ultrices. Lorem ipsum
+                      dolor sit amet, consectetur adipiscing vehicula id nulla
+                      dignissim dapibus ultrices. Lorem ipsum dolor sit amet,
+                      consectetur adipiscing vehicula id nulla dignissim dapibus
+                      ultrices. Lorem ipsum dolor sit amet, consectetur
                       adipiscing vehicula id nulla dignissim dapibus ultrices.
-                      Lorem ipsum dolor sit amet, consectetur adipiscing vehicula
-                      id nulla dignissim dapibus ultrices. Lorem ipsum dolor sit
-                      amet, consectetur adipiscing vehicula id nulla dignissim
-                      dapibus ultrices. Lorem ipsum dolor sit amet, consectetur
-                      adipiscing vehicula id nulla dignissim dapibus ultrices.
+                      Lorem ipsum dolor sit amet, consectetur adipiscing
+                      vehicula id nulla dignissim dapibus ultrices. Lorem ipsum
+                      dolor sit amet, consectetur adipiscing vehicula id nulla
+                      dignissim dapibus ultrices.
                     </p>
                     <a href="#" className="special">
                       Learn more
@@ -168,11 +211,12 @@ class Home extends React.PureComponent {
                     </a>
                     <h3 className="major">Ante fermentum</h3>
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing vehicula
-                      id nulla dignissim dapibus ultrices. Lorem ipsum dolor sit
-                      amet, consectetur adipiscing vehicula id nulla dignissim
-                      dapibus ultrices. Lorem ipsum dolor sit amet, consectetur
-                      adipiscing vehicula id nulla dignissim dapibus ultrices.
+                      Lorem ipsum dolor sit amet, consectetur adipiscing
+                      vehicula id nulla dignissim dapibus ultrices. Lorem ipsum
+                      dolor sit amet, consectetur adipiscing vehicula id nulla
+                      dignissim dapibus ultrices. Lorem ipsum dolor sit amet,
+                      consectetur adipiscing vehicula id nulla dignissim dapibus
+                      ultrices.
                     </p>
                     <a href="#" className="special">
                       Learn more
@@ -184,8 +228,8 @@ class Home extends React.PureComponent {
                     </a>
                     <h3 className="major">Fusce consequat</h3>
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing vehicula
-                      id nulla dignissim dapibus ultrices.
+                      Lorem ipsum dolor sit amet, consectetur adipiscing
+                      vehicula id nulla dignissim dapibus ultrices.
                     </p>
                     <a href="#" className="special">
                       Learn more
@@ -202,15 +246,16 @@ class Home extends React.PureComponent {
               </div>
             </section>
           </section>
-  
+
           <section id="footer">
             <div className="inner">
               <h2 className="major">Get in touch</h2>
               <p>
-                Cras mattis ante fermentum, malesuada neque vitae, eleifend erat.
-                Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis
-                egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus
-                in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.
+                Cras mattis ante fermentum, malesuada neque vitae, eleifend
+                erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget
+                mattis egestas, purus ipsum consequat orci, sit amet lobortis
+                lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat
+                auctor laoreet.
               </p>
               <form method="post" action="#">
                 <div className="fields">
@@ -273,8 +318,6 @@ class Home extends React.PureComponent {
   }
 }
 
-Home.propTypes = {
-
-};
+Home.propTypes = {};
 
 export default withMainLayout(Home);

@@ -1,5 +1,5 @@
 import React from 'react';
-import Xlink from '../routing/Xlink';
+import Xlink from '../../routing/Xlink';
 
 const Menu = (props) => (
   <nav id="menu">

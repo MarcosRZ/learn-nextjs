@@ -25,11 +25,7 @@ app.prepare().then(() => {
 
     // const { pathname, query } = parsedUrl;
 
-    console.log('Processing: ', req.url);
-
     const target = Router.processRoute(req.url);
-
-    console.log(target);
 
     if (target) {
       app.render(req, res, target.target, target.params);

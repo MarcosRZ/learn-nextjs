@@ -1,9 +1,7 @@
 import React from 'react';
-import Xlink from '../routing/Xlink';
+import Xlink from '../../routing/Xlink';
+
 class Header extends React.PureComponent {
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     return (

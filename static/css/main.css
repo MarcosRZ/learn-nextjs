@@ -3048,7 +3048,7 @@ button,
 .wrapper.spotlight:after {
   box-shadow: inset 0 -1px 0 0 #005b84, 0 1px 0 0 #005b84;
 }
-.wrapper.spotlight .inner {
+.wrapper.spotlight .inner > div {
   display: -moz-flex;
   display: -webkit-flex;
   display: -ms-flex;
@@ -3077,7 +3077,7 @@ button,
   width: 100%;
   -ms-flex: 2;
 }
-.wrapper.spotlight:nth-child(2n - 1) .inner {
+.wrapper.spotlight:nth-child(2n - 1) .inner > div {
   -moz-flex-direction: row-reverse;
   -webkit-flex-direction: row-reverse;
   -ms-flex-direction: row-reverse;
@@ -3190,7 +3190,7 @@ button,
   .wrapper .inner {
     padding: 2em 2em 0.1em 2em;
   }
-  .wrapper.spotlight .inner {
+  .wrapper.spotlight .inner > div {
     -moz-align-items: -moz-flex-start;
     -webkit-align-items: -webkit-flex-start;
     -ms-align-items: -ms-flex-start;
@@ -3205,7 +3205,7 @@ button,
   }
 }
 @media screen and (max-width: 480px) {
-  .wrapper.spotlight .inner {
+  .wrapper.spotlight .inner > div {
     display: block;
   }
   .wrapper.spotlight .image {

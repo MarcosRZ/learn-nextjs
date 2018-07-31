@@ -163,7 +163,7 @@
 			@include wrapper-edges-color(_palette(accent));
 			background-color: _palette(accent);
 
-			.inner {
+			.inner > div {
 				@include vendor('display', 'flex');
 				@include vendor('align-items', 'center');
 				@include vendor('flex-direction', 'row');
@@ -188,7 +188,7 @@
 			}
 
 			&:nth-child(2n - 1) {
-				.inner {
+				.inner > div {
 					@include vendor('flex-direction', 'row-reverse');
 					text-align: right;
 				}
@@ -265,7 +265,7 @@
 			}
 
 			&.spotlight {
-				.inner {
+				.inner > div {
 					@include vendor('align-items', 'flex-start');
 				}
 
@@ -284,7 +284,7 @@
 
 		@include breakpoint('<=xsmall') {
 			&.spotlight {
-				.inner {
+				.inner > div {
 					display: block;
 				}
 
