@@ -2469,6 +2469,7 @@ button,
   top: 0;
   width: 100%;
   z-index: 10000;
+  box-shadow: 0px 0px 10px #23338885;
 }
 #header h1 {
   -moz-transition: opacity 0.2s ease-in-out, visibility 0.2s;
@@ -2536,10 +2537,7 @@ button,
 }
 #header.alt {
   background-color: transparent;
-}
-#header.alt h1 {
-  opacity: 0;
-  visibility: hidden;
+  box-shadow: none;
 }
 @media screen and (max-width: 736px) {
   #header {

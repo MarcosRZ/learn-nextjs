@@ -17,7 +17,7 @@
 		top: 0;
 		width: 100%;
 		z-index: _misc(z-index-base);
-
+		box-shadow: 0px 0px 10px _palette(header-shadow-color);
 		h1 {
 			@include vendor('transition', (
 				'opacity #{_duration(transition)} ease-in-out',
@@ -81,11 +81,13 @@
 
 		&.alt {
 			background-color: transparent;
+			box-shadow: none;
+			// Marcos -> Dejamos el título visto todo el tiempo.
 
-			h1 {
-				opacity: 0;
-				visibility: hidden;
-			}
+			// h1 {
+			// 	opacity: 0;
+			// 	visibility: hidden;
+			// }
 		}
 
 		@include breakpoint('<=small') {
