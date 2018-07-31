@@ -11,17 +11,17 @@ const Menu = props => {
         <h2>Menu</h2>
         <ul className="links">
           <li>
-            <Xlink href="/">
+            <Xlink href="/" prefetch>
               <a>Home</a>
             </Xlink>
           </li>
           <li>
-            <Xlink href="/generic">
+            <Xlink href="/generic" prefetch>
               <a>Generic</a>
             </Xlink>
           </li>
           <li>
-            <Xlink href="/elements">
+            <Xlink href="/elements" prefetch>
               <a>Elements</a>
             </Xlink>
           </li>

@@ -7,8 +7,6 @@ import Card from '../components/Card';
 import Cards from '../components/Cards';
 import Actions from '../components/Actions';
 import Banner from '../components/Banner';
-import Xlink from '../routing/Xlink';
-import {APP_NAME2} from '../config/app';
 
 class Home extends React.PureComponent {
   componentDidMount() {}
@@ -17,15 +15,8 @@ class Home extends React.PureComponent {
     return (
       <div>
         <div id="page-wrapper">
-          <Banner>
-            <h2>{APP_NAME2}</h2>
-            <p>
-              Marcos Rodríguez Martínez
-              {/* <Xlink href="/generic">
-                <span className="link">HERE</span>
-              </Xlink> */}
-            </p>
-          </Banner>
+
+          <Banner />
 
           <section id="wrapper">
             <Section className="wrapper spotlight style1">
@@ -103,14 +94,14 @@ class Home extends React.PureComponent {
               </SectionHeading>
 
               <Cards>
-                <Card
+                <Card 
                   title="Sed feugiat lorem"
                   content="Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices."
                   linkText="Link text one"
                   linkUrl="/generic"
                   imageUrl="static/images/pic04.jpg"
                 />
-                <Card
+                <Card 
                   title="Nisl placerat"
                   content="Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id
                   nulla dignissim dapibus ultrices. Lorem ipsum dolor sit amet,
@@ -126,7 +117,7 @@ class Home extends React.PureComponent {
                   linkUrl="/generic"
                   imageUrl="static/images/pic05.jpg"
                 />
-                <Card
+                <Card 
                   title="Ante fermentum"
                   content="Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id
                   nulla dignissim dapibus ultrices. Lorem ipsum dolor sit amet,
@@ -137,7 +128,7 @@ class Home extends React.PureComponent {
                   linkUrl="/generic"
                   imageUrl="static/images/pic06.jpg"
                 />
-                <Card
+                <Card 
                   title="Fusce consequat"
                   content="Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id
                   nulla dignissim dapibus ultrices."
