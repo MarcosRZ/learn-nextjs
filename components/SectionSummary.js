@@ -14,7 +14,7 @@ const SectionSummary = props => {
       </Xlink>
       <div className="content">
         <h2 className="major">{title}</h2>
-        <p>{children}</p>
+        {children}
         <Xlink href={linkUrl}>
           <a className="special">{linkText}</a>
         </Xlink>
