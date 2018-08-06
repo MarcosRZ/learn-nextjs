@@ -32,7 +32,7 @@ Professional.propTypes = {
   company: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
   time: PropTypes.string.isRequired,
-
+  children: PropTypes.node.isRequired,
 };
 
 export default Professional;

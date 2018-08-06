@@ -8,7 +8,8 @@ import Cards from '../components/Cards';
 import Actions from '../components/Actions';
 import Banner from '../components/Banner';
 import Professional from '../components/Professional';
-import TimeLine from '../components/TimeLine';
+import Timeline from '../components/Timeline';
+import TimelineEvent from '../components/TimelineEvent';
 
 class Home extends React.PureComponent {
   componentDidMount() {}
@@ -49,107 +50,94 @@ class Home extends React.PureComponent {
 
             <Section className="wrapper spotlight style2 alt">
               <h2 className="major">Professional</h2>
-              <Professional
-                title="Fullstack Senior Software Engineer"
-                company="Grupo Clarcat"
-                location="Gijón"
-                time="2018 - Present"
-              >
-                <p>
-                  Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras
-                  turpis ante, nullam sit amet turpis non, sollicitudin posuere
-                  urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim
-                  dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla
-                  cursus. 1 Lorem ipsum dolor sit amet, etiam lorem adipiscing
-                  elit. Cras turpis ante, nullam sit amet turpis non,
-                  sollicitudin posuere urna.
-                </p>
-              </Professional>
-
-              <Professional
-                title="Fullstack JS Software Engineer"
-                company="BinPar Digital Ignition"
-                location="Madrid"
-                time="2017 - 2018"
-              >
-                <p>
-                  Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras
-                  turpis ante, nullam sit amet turpis non, sollicitudin posuere
-                  urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim
-                  dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla
-                  cursus. 1 Lorem ipsum dolor sit amet, etiam lorem adipiscing
-                  elit. Cras turpis ante, nullam sit amet turpis non,
-                  sollicitudin posuere urna.
-                </p>
-              </Professional>
-              <Professional
-                title="Fullstack ASP.NET Software Engineer"
-                company="iBakari Desarrollos Informáticos"
-                location="Oviedo"
-                time="2015 - 2017"
-              >
-                <p>
-                  Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras
-                  turpis ante, nullam sit amet turpis non, sollicitudin posuere
-                  urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim
-                  dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla
-                  cursus. 1 Lorem ipsum dolor sit amet, etiam lorem adipiscing
-                  elit. Cras turpis ante, nullam sit amet turpis non,
-                  sollicitudin posuere urna.
-                </p>
-              </Professional>
-              <Professional
-                title="Fullstack Software Engineer / Robotics Engineer"
-                company="Adele Robots"
-                location="Oviedo"
-                time="2014 - 2015"
-              >
-                <p>
-                  Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras
-                  turpis ante, nullam sit amet turpis non, sollicitudin posuere
-                  urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim
-                  dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla
-                  cursus. 1 Lorem ipsum dolor sit amet, etiam lorem adipiscing
-                  elit. Cras turpis ante, nullam sit amet turpis non,
-                  sollicitudin posuere urna.
-                </p>
-              </Professional>
-              <Professional
-                title="Java FX and Javascript Developer"
-                company="Seresco Soluciones"
-                location="Oviedo"
-                time="2014 (Curricular internship, 3 months)"
-              >
-                <p>
-                  Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras
-                  turpis ante, nullam sit amet turpis non, sollicitudin posuere
-                  urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim
-                  dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla
-                  cursus. 1 Lorem ipsum dolor sit amet, etiam lorem adipiscing
-                  elit. Cras turpis ante, nullam sit amet turpis non,
-                  sollicitudin posuere urna.
-                </p>
-              </Professional>
-              <Professional
-                title="ASPX Developer"
-                company="ASAC Comunicaciones"
-                location="Llanera, Oviedo"
-                time="2010 (Curricular internship, 4 months)"
-              >
-                <p>
-                  Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras
-                  turpis ante, nullam sit amet turpis non, sollicitudin posuere
-                  urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim
-                  dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla
-                  cursus. 1 Lorem ipsum dolor sit amet, etiam lorem adipiscing
-                  elit. Cras turpis ante, nullam sit amet turpis non,
-                  sollicitudin posuere urna.
-                </p>
-              </Professional>
-            </Section>
-
-            <Section className="wrapper spotlight style3">
-              <TimeLine />
+              <Timeline>
+                <TimelineEvent
+                  date="2018 - Present"
+                  title="Fullstack Senior Software Engineer"
+                  company="Grupo Clarcat"
+                  location="Gijón / Xixón"
+                >
+                  <p>
+                    Sed posuere consectetur est at lobortis. Nullam quis risus
+                    eget urna mollis ornare vel eu leo. Donec sed odio dui.
+                    Morbi leo risus, porta ac consectetur ac, vestibulum at
+                    eros. Nullam quis risus eget urna mollis ornare vel eu leo.
+                    Cras mattis consectetur purus sit amet fermentum.
+                  </p>
+                </TimelineEvent>
+                <TimelineEvent
+                  title="Fullstack JS Software Engineer"
+                  company="BinPar Digital Ignition"
+                  location="Madrid"
+                  date="2017 - 2018"
+                >
+                  <p>
+                    Sed posuere consectetur est at lobortis. Nullam quis risus
+                    eget urna mollis ornare vel eu leo. Donec sed odio dui.
+                    Morbi leo risus, porta ac consectetur ac, vestibulum at
+                    eros. Nullam quis risus eget urna mollis ornare vel eu leo.
+                    Cras mattis consectetur purus sit amet fermentum.
+                  </p>
+                </TimelineEvent>
+                <TimelineEvent
+                  title="Fullstack ASP.NET Software Engineer"
+                  company="iBakari Desarrollos Informáticos"
+                  location="Oviedo"
+                  date="2015 - 2017"
+                >
+                  <p>
+                    Sed posuere consectetur est at lobortis. Nullam quis risus
+                    eget urna mollis ornare vel eu leo. Donec sed odio dui.
+                    Morbi leo risus, porta ac consectetur ac, vestibulum at
+                    eros. Nullam quis risus eget urna mollis ornare vel eu leo.
+                    Cras mattis consectetur purus sit amet fermentum.
+                  </p>
+                </TimelineEvent>
+                <TimelineEvent
+                  title="Fullstack Software Engineer / Robotics Engineer"
+                  company="Adele Robots"
+                  location="Oviedo"
+                  date="2014 - 2015"
+                >
+                  <p>
+                    Sed posuere consectetur est at lobortis. Nullam quis risus
+                    eget urna mollis ornare vel eu leo. Donec sed odio dui.
+                    Morbi leo risus, porta ac consectetur ac, vestibulum at
+                    eros. Nullam quis risus eget urna mollis ornare vel eu leo.
+                    Cras mattis consectetur purus sit amet fermentum.
+                  </p>
+                </TimelineEvent>
+                <TimelineEvent
+                  title="Java FX and Javascript Developer"
+                  company="Seresco Soluciones"
+                  location="Oviedo"
+                  date="2014"
+                  sub="( 3 mos. )"
+                >
+                  <p>
+                    Sed posuere consectetur est at lobortis. Nullam quis risus
+                    eget urna mollis ornare vel eu leo. Donec sed odio dui.
+                    Morbi leo risus, porta ac consectetur ac, vestibulum at
+                    eros. Nullam quis risus eget urna mollis ornare vel eu leo.
+                    Cras mattis consectetur purus sit amet fermentum.
+                  </p>
+                </TimelineEvent>
+                <TimelineEvent
+                  title="ASPX Developer"
+                  company="ASAC Comunicaciones"
+                  location="Llanera, Oviedo"
+                  date="2010"
+                  sub="( 4 mos. )"
+                >
+                  <p>
+                    Sed posuere consectetur est at lobortis. Nullam quis risus
+                    eget urna mollis ornare vel eu leo. Donec sed odio dui.
+                    Morbi leo risus, porta ac consectetur ac, vestibulum at
+                    eros. Nullam quis risus eget urna mollis ornare vel eu leo.
+                    Cras mattis consectetur purus sit amet fermentum.
+                  </p>
+                </TimelineEvent>
+              </Timeline>
             </Section>
 
             <Section className="wrapper spotlight style3">
