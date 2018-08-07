@@ -2,17 +2,25 @@
 	cursor: pointer;
 }
 
-.flex-column{
-	flex-direction: column !important;
-}
 
 .flex{
+	display:flex;
+	
 	@include breakpoint('<=small') {
 		flex-direction: column !important;
 	}
-	display:flex;
-
+	
 	.sb {
 		justify-content: space-between;
 	}
+
+	&.flex-column{
+		flex-direction: column !important;
+
+		p, li, div {
+			margin-bottom: 15px;
+		}
+	}
+
+
 }

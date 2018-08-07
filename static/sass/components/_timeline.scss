@@ -82,11 +82,17 @@ $font-text: 'Chivo', sans-serif;
   }
 
   .timeline-event-container {
+
     overflow: hidden;
+
     @include breakpoint('<=small') {
       padding-left: $dot-size / 2;
+      padding-left: 30px;
     }
+
     &:first-of-type {
+
+      padding-top: 20px;
 
       .timeline-event-date {
         padding-top: 0.2 * ($dot-size);
@@ -97,7 +103,7 @@ $font-text: 'Chivo', sans-serif;
 
         .dot {
           background-color: _palette(timeline-detail-color-a);
-          box-shadow: 0px 0px 20px inset _palette(timeline-detail-color-b);
+          box-shadow: 0px 0px 20px _palette(timeline-detail-color-b);
         }
       }
     }
@@ -150,27 +156,22 @@ $font-text: 'Chivo', sans-serif;
 
   }
 
-  .flex {
-		display: flex;
-    justify-content: space-between;
-    
-    p.location{
-      margin: 0;
-    }
-  }
-
   h3 {
+
     color: orange;
     font-size: 1.2em;
-    margin-top: -0.75 * ($dot-size)
+    margin-top: -0.75 * ($dot-size);
+
+    @include breakpoint('<=small') {
+      margin-top: -1 * ($dot-size);
+    }
   }
   h4 {
     font-size: .9em;
   }
-
-	.location {
-		font-weight: 200;
-		margin: 5px;
+  
+  .event-description-item {
+    font-weight: 200;
 		color: #ccc;
-	}
+  }
 }
