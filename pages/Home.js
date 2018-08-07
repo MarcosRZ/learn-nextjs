@@ -34,6 +34,7 @@ class Home extends React.PureComponent {
                 content="Contenido"
                 imageUrl="static/images/pic01.jpg"
                 linkText="Ver sección"
+                linkUrl="/"
               >
                 <p>
                   1 Lorem ipsum dolor sit amet, etiam lorem adipiscing elit.
@@ -149,7 +150,9 @@ class Home extends React.PureComponent {
                 content="Contenido"
                 imageUrl="static/images/pic01.jpg"
                 linkText="Ver sección"
+                linkUrl="/"
                 className="style3"
+
               >
                 <p>
                   3 Lorem ipsum dolor sit amet, etiam lorem adipiscing elit.

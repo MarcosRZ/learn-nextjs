@@ -31,4 +31,6 @@ SectionSummary.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
+SectionSummary.defaultProps = {};
+
 export default SectionSummary;

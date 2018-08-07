@@ -19,41 +19,11 @@ $timeline-event-spacing: 100px;
 $font-title: 'Saira', sans-serif;
 $font-text: 'Chivo', sans-serif;
 
-/* Base */
 
-// body {
-//   background: $background;
-//   font-size: 16px;
-// }
-
-// p {
-//   font-weight: 300;
-// }
-
-// strong {
-//   font-weight: 600;
-// }
-
-// h1 {
-//  font-family: $font-title;
-//  letter-spacing: 1.5px;
-//  color: $color-light;  
-//  font-weight: 400;
-//  font-size: 2.4em;
-// }
-
-// #content {
-//   margin-top: $spacing;
-//   text-align: center;  
-// }
-
-/* Timeline */
 .timeline {
 
   border-bottom-right-radius: $radius;
-  border-top-right-radius: $radius;    
-  // background: transparentize(_palette(timeline-color-light), .9);
-  // color: fade(white, 80%);
+  border-top-right-radius: $radius;
   font-family: _font(family);   
   letter-spacing: 0.5px;   
   position: relative;
@@ -137,6 +107,11 @@ $font-text: 'Chivo', sans-serif;
       box-shadow: 0px 0px 20px inset _palette(timeline-detail-color-a);
       border-radius: $dot-border-radius;
     }
+
+    .event-description-item {
+      font-weight: 200;
+      color: #CCC;
+    }
   }
   
   .event {
@@ -170,8 +145,5 @@ $font-text: 'Chivo', sans-serif;
     font-size: .9em;
   }
   
-  .event-description-item {
-    font-weight: 200;
-		color: #ccc;
-  }
+
 }
