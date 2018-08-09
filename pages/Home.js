@@ -9,6 +9,7 @@ import Actions from '../components/Actions';
 import Banner from '../components/Banner';
 import Timeline from '../components/Timeline';
 import TimelineEvent from '../components/TimelineEvent';
+import Professional from '../components/Professional';
 
 class Home extends React.PureComponent {
   componentDidMount() {}
@@ -50,8 +51,9 @@ class Home extends React.PureComponent {
 
             <Section className="wrapper spotlight style2 alt">
               <h2 className="major">Professional</h2>
-              <Timeline>
+              <Timeline className="professional">
                 <TimelineEvent
+                  dotText="1"
                   date="2018 - Present"
                   title="Fullstack Senior Software Engineer"
                   company="Grupo Clarcat"
@@ -67,11 +69,12 @@ class Home extends React.PureComponent {
                   </p>
                 </TimelineEvent>
                 <TimelineEvent
+                  dotText="2"
                   title="Fullstack JS Software Engineer"
                   company="BinPar Digital Ignition"
                   location="Madrid"
                   date="2017 - 2018"
-                  techs="React | Redux | GraphQL | Apollo | NodeJS | MongoDB"                  
+                  techs="React | Redux | GraphQL | Apollo | NodeJS | MongoDB"
                 >
                   <p>
                     Sed posuere consectetur est at lobortis. Nullam quis risus
@@ -82,6 +85,7 @@ class Home extends React.PureComponent {
                   </p>
                 </TimelineEvent>
                 <TimelineEvent
+                  dotText="3"
                   title="Fullstack ASP.NET Software Engineer"
                   company="iBakari Desarrollos Informáticos"
                   location="Oviedo / Uviéu"
@@ -97,6 +101,7 @@ class Home extends React.PureComponent {
                   </p>
                 </TimelineEvent>
                 <TimelineEvent
+                  dotText="4"
                   title="Fullstack Software Engineer / Robotics Engineer"
                   company="Adele Robots"
                   location="Oviedo / Uviéu"
@@ -112,6 +117,7 @@ class Home extends React.PureComponent {
                   </p>
                 </TimelineEvent>
                 <TimelineEvent
+                  dotText="5"
                   title="Java FX and Javascript Developer"
                   company="Seresco Soluciones"
                   location="Oviedo / Uviéu"
@@ -127,6 +133,7 @@ class Home extends React.PureComponent {
                   </p>
                 </TimelineEvent>
                 <TimelineEvent
+                  dotText="6"
                   title="ASPX Developer"
                   company="ASAC Comunicaciones"
                   location="Oviedo / Uviéu"
@@ -144,24 +151,40 @@ class Home extends React.PureComponent {
               </Timeline>
             </Section>
 
-            <Section className="wrapper spotlight style3">
-              <SectionSummary
-                title="Academic"
-                content="Contenido"
-                imageUrl="static/images/pic01.jpg"
-                linkText="Ver sección"
-                linkUrl="/"
-                className="style3"
-
-              >
-                <p>
-                  3 Lorem ipsum dolor sit amet, etiam lorem adipiscing elit.
-                  Cras turpis ante, nullam sit amet turpis non, sollicitudin
-                  posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla
-                  dignissim dapibus. Nullam ultrices, neque et faucibus viverra,
-                  ex nulla cursus.
-                </p>
-              </SectionSummary>
+            <Section className="wrapper style3">
+              <h2 className="major">Academic</h2>
+              <Timeline className="academic">
+                <TimelineEvent
+                  dotText="7"
+                  date="2010 - 2015"
+                  title="Degree in Software Engineering"
+                  company="University Of Oviedo"
+                  location="Oviedo / Uviéu"
+                >
+                  <p>
+                    Sed posuere consectetur est at lobortis. Nullam quis risus
+                    eget urna mollis ornare vel eu leo. Donec sed odio dui.
+                    Morbi leo risus, porta ac consectetur ac, vestibulum at
+                    eros. Nullam quis risus eget urna mollis ornare vel eu leo.
+                    Cras mattis consectetur purus sit amet fermentum.
+                  </p>
+                </TimelineEvent>
+                <TimelineEvent
+                  dotText="8"
+                  date="2008 - 2010"
+                  title="High Certificate in Sofwtware Development"
+                  company="I.E.S. Doctor Fleming"
+                  location="Oviedo / Uviéu"
+                >
+                  <p>
+                    Sed posuere consectetur est at lobortis. Nullam quis risus
+                    eget urna mollis ornare vel eu leo. Donec sed odio dui.
+                    Morbi leo risus, porta ac consectetur ac, vestibulum at
+                    eros. Nullam quis risus eget urna mollis ornare vel eu leo.
+                    Cras mattis consectetur purus sit amet fermentum.
+                  </p>
+                </TimelineEvent>
+              </Timeline>
             </Section>
 
             <Section className="wrapper style2 alt">

@@ -393,18 +393,42 @@ hr.major {
     padding-left: 30px;
   }
 }
-.timeline .timeline-event-container:first-of-type {
+.timeline .timeline-event-container.academic .dot {
+  background-color: #9dff00;
+  border: 4px solid #9dff00;
+  box-shadow: 0px 0px 20px inset #9dff00;
+}
+.timeline .timeline-event-container.academic .timeline-event-description {
+  border-left: 4px solid #9dff00;
+}
+.timeline .timeline-event-container.academic .timeline-event-description h3 {
+  color: #9dff00;
+}
+.timeline .timeline-event-container.professional .timeline-event-description {
+  border-left: 4px solid orange;
+}
+.timeline .timeline-event-container.professional .timeline-event-description h3 {
+  color: orange;
+}
+.timeline .timeline-event-container.professional:first-of-type {
   padding-top: 20px;
 }
-.timeline .timeline-event-container:first-of-type .timeline-event-date {
+.timeline .timeline-event-container.professional:first-of-type .timeline-event-date {
   padding-top: 8px;
 }
-.timeline .timeline-event-container:first-of-type .timeline-event-description {
+.timeline .timeline-event-container.professional:first-of-type .timeline-event-description {
   padding-top: 0;
 }
-.timeline .timeline-event-container:first-of-type .timeline-event-description .dot {
-  background-color: orange;
+.timeline .timeline-event-container.professional:first-of-type .timeline-event-description .dot {
   box-shadow: 0px 0px 20px red;
+}
+.timeline .timeline-event-container.professional .dot {
+  background-color: orange;
+  border: 4px solid orange;
+  box-shadow: 0px 0px 20px inset orange;
+}
+.timeline .timeline-event-container.professional .timeline-event-description {
+  border-left: 4px solid orange;
 }
 .timeline .timeline-event-date {
   float: left;
@@ -419,7 +443,7 @@ hr.major {
 .timeline .timeline-event-description {
   float: left;
   width: 80%;
-  border-left: 4px solid orange;
+  border-left: 4px solid;
   padding-left: 44px;
   padding-bottom: 50px;
   padding-top: 50px;
@@ -430,10 +454,14 @@ hr.major {
   width: 40px;
   top: 0;
   left: -66px;
-  border: 4px solid orange;
+  border: 4px solid;
   background-color: #444;
-  box-shadow: 0px 0px 20px inset orange;
+  box-shadow: 0px 0px 20px inset;
   border-radius: 50%;
+  text-align: center;
+  color: #3e3e3e;
+  font-weight: 900;
+  line-height: 31px;
 }
 .timeline .timeline-event-description .event-description-item {
   font-weight: 200;
@@ -452,7 +480,6 @@ hr.major {
   top: 0;
 }
 .timeline h3 {
-  color: orange;
   font-size: 1.2em;
   margin-top: -30px;
 }

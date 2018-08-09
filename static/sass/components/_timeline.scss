@@ -60,21 +60,60 @@ $font-text: 'Chivo', sans-serif;
       padding-left: 30px;
     }
 
-    &:first-of-type {
-
-      padding-top: 20px;
-
-      .timeline-event-date {
-        padding-top: 0.2 * ($dot-size);
+    &.academic {
+      .dot {
+        background-color: _palette(timeline-detail-color-academic);
+        border: $border-thickness solid _palette(timeline-detail-color-academic);
+        box-shadow: 0px 0px 20px inset _palette(timeline-detail-color-academic);
       }
 
       .timeline-event-description {
-        padding-top: 0;
+        border-left: $border-thickness solid _palette(timeline-detail-color-academic);
 
-        .dot {
-          background-color: _palette(timeline-detail-color-a);
-          box-shadow: 0px 0px 20px _palette(timeline-detail-color-b);
+        h3 {
+          color: _palette(timeline-detail-color-academic);
         }
+      }
+
+
+    }
+
+    &.professional {
+
+      .timeline-event-description {
+        border-left: $border-thickness solid _palette(timeline-detail-color-professional);
+
+        h3 {
+          color: _palette(timeline-detail-color-professional);
+        }
+      }
+
+      &:first-of-type {
+
+        padding-top: 20px;
+  
+        .timeline-event-date {
+          padding-top: 0.2 * ($dot-size);
+        }
+  
+        .timeline-event-description {
+          padding-top: 0;
+  
+          .dot {
+            // background-color: _palette(timeline-detail-color-a);
+            box-shadow: 0px 0px 20px _palette(timeline-detail-color-b);
+          }
+        }
+      }
+
+      .dot {
+        background-color: _palette(timeline-detail-color-professional);
+        border: $border-thickness solid _palette(timeline-detail-color-professional);
+        box-shadow: 0px 0px 20px inset _palette(timeline-detail-color-professional);
+      }
+
+      .timeline-event-description {
+        border-left: $border-thickness solid _palette(timeline-detail-color-professional);
       }
     }
   }
@@ -106,6 +145,10 @@ $font-text: 'Chivo', sans-serif;
       background-color: _palette(timeline-event-background);
       box-shadow: 0px 0px 20px inset _palette(timeline-detail-color-a);
       border-radius: $dot-border-radius;
+      text-align: center;
+      color: #3e3e3e;
+      font-weight: 900;
+      line-height: 31px;
     }
 
     .event-description-item {
@@ -132,8 +175,6 @@ $font-text: 'Chivo', sans-serif;
   }
 
   h3 {
-
-    color: orange;
     font-size: 1.2em;
     margin-top: -0.75 * ($dot-size);
 
