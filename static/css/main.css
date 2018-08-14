@@ -136,6 +136,10 @@ body {
   margin-bottom: 15px;
 }
 
+.right {
+  text-align: right;
+}
+
 /* Type */
 body, input, select, textarea {
   color: #ffffff;
@@ -351,6 +355,13 @@ hr.major {
 
 .align-right {
   text-align: right;
+}
+
+.tech .logo {
+  padding: 20px;
+}
+.tech .logo.bright {
+  background-color: white;
 }
 
 /* Import */

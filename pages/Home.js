@@ -9,7 +9,7 @@ import Actions from '../components/Actions';
 import Banner from '../components/Banner';
 import Timeline from '../components/Timeline';
 import TimelineEvent from '../components/TimelineEvent';
-import Professional from '../components/Professional';
+import Tech from '../components/Tech';
 
 class Home extends React.PureComponent {
   componentDidMount() {}
@@ -195,17 +195,118 @@ class Home extends React.PureComponent {
                 lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat
                 auctor laoreet.
               </SectionHeading>
+              <Tech
+                title="React"
+                imageUrl="/static/images/react.svg"
+                linkText="GO!"
+                linkUrl="/#"
+              >
+                <p>
+                  Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis
+                  egestas, purus ipsum consequat orci, sit amet lobortis lorem
+                  lacus in tellus. Sed ac elementum arcu. Quisque placerat
+                  auctor laoreet.
+                </p>
+              </Tech>
+              <Tech
+                title="Redux"
+                imageUrl="/static/images/redux.png"
+                linkText="GO!"
+                linkUrl="/#"
+              >
+                <p>
+                  Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis
+                  egestas, purus ipsum consequat orci, sit amet lobortis lorem
+                  lacus in tellus. Sed ac elementum arcu. Quisque placerat
+                  auctor laoreet.
+                </p>
+              </Tech>
+              <Tech
+                title="Apollo"
+                imageUrl="/static/images/apollo.png"
+                linkText="GO!"
+                linkUrl="/#"
+              >
+                <p>
+                  Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis
+                  egestas, purus ipsum consequat orci, sit amet lobortis lorem
+                  lacus in tellus. Sed ac elementum arcu. Quisque placerat
+                  auctor laoreet.
+                </p>
+              </Tech>
+              <Tech
+                title="Angular"
+                imageUrl="/static/images/angular6.svg"
+                linkText="GO!"
+                linkUrl="/#"
+              >
+                <p>
+                  Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis
+                  egestas, purus ipsum consequat orci, sit amet lobortis lorem
+                  lacus in tellus. Sed ac elementum arcu. Quisque placerat
+                  auctor laoreet.
+                </p>
+              </Tech>
+              <Tech
+                title="GraphQL"
+                imageUrl="/static/images/graphql.png"
+                linkText="GO!"
+                linkUrl="/#"
+              >
+                <p>
+                  Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis
+                  egestas, purus ipsum consequat orci, sit amet lobortis lorem
+                  lacus in tellus. Sed ac elementum arcu. Quisque placerat
+                  auctor laoreet.
+                </p>
+              </Tech>
+              <Tech
+                title="NodeJS"
+                imageUrl="/static/images/node3.png"
+                linkText="GO!"
+                linkUrl="/#"
+              >
+                <p>
+                  Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis
+                  egestas, purus ipsum consequat orci, sit amet lobortis lorem
+                  lacus in tellus. Sed ac elementum arcu. Quisque placerat
+                  auctor laoreet.
+                </p>
+              </Tech>
+              <Tech
+                title="MongoDB"
+                imageUrl="/static/images/mongodb.png"
+                linkText="GO!"
+                linkUrl="/#"
+              >
+                <p>
+                  Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis
+                  egestas, purus ipsum consequat orci, sit amet lobortis lorem
+                  lacus in tellus. Sed ac elementum arcu. Quisque placerat
+                  auctor laoreet.
+                </p>
+              </Tech>
+            </Section>
+
+            <Section className="wrapper style1">
+              <SectionHeading title="Frameworks and Techs">
+                Cras mattis ante fermentum, malesuada neque vitae, eleifend
+                erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget
+                mattis egestas, purus ipsum consequat orci, sit amet lobortis
+                lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat
+                auctor laoreet.
+              </SectionHeading>
 
               <Cards>
                 <Card
-                  title="Sed feugiat lorem"
+                  title="NodeJS"
                   content="Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices."
                   linkText="Link text one"
                   linkUrl="/generic"
-                  imageUrl="static/images/pic04.jpg"
+                  imageUrl="static/images/node.png"
                 />
                 <Card
-                  title="Nisl placerat"
+                  title="React"
                   content="Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id
                   nulla dignissim dapibus ultrices. Lorem ipsum dolor sit amet,
                   consectetur adipiscing vehicula id nulla dignissim dapibus
@@ -218,10 +319,10 @@ class Home extends React.PureComponent {
                   vehicula id nulla dignissim dapibus ultrices."
                   linkText="Link text two"
                   linkUrl="/generic"
-                  imageUrl="static/images/pic05.jpg"
+                  imageUrl="static/images/react.svg"
                 />
                 <Card
-                  title="Ante fermentum"
+                  title="GraphQL"
                   content="Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id
                   nulla dignissim dapibus ultrices. Lorem ipsum dolor sit amet,
                   consectetur adipiscing vehicula id nulla dignissim dapibus
@@ -229,7 +330,7 @@ class Home extends React.PureComponent {
                   vehicula id nulla dignissim dapibus ultrices."
                   linkText="Link text three"
                   linkUrl="/generic"
-                  imageUrl="static/images/pic06.jpg"
+                  imageUrl="static/images/graphql.png"
                 />
                 <Card
                   title="Fusce consequat"
