@@ -37,12 +37,13 @@ class MainLayout extends PureComponent {
 
     const { showHeader } = this.state;
 
-    if ( showHeader && px > SHOW_MENU_OFFSET_PX) return;
+    if (showHeader && px > SHOW_MENU_OFFSET_PX) return;
 
     if (!showHeader && px < SHOW_MENU_OFFSET_PX) return;
 
     this.setState({ showHeader: px > SHOW_MENU_OFFSET_PX });
   }
+
 
   startAnimations() {
     this.setState({ isPreload: false });
@@ -71,10 +72,17 @@ class MainLayout extends PureComponent {
           <meta charSet="utf-8" />
           <title>P1x3L SuSH1</title>
           <link rel="stylesheet" type="text/css" href="/static/css/main.css" />
-          <link rel='shortcut icon' type='image/x-icon' href='/static/images/sushi.png' />
+          <link
+            rel="shortcut icon"
+            type="image/x-icon"
+            href="/static/images/sushi.png"
+          />
         </Head>
 
-        <Header handleMenuClick={this.toggleMenuVisibility} className={showHeader ? '' : 'alt'} />
+        <Header
+          handleMenuClick={this.toggleMenuVisibility}
+          className={showHeader ? '' : 'alt'}
+        />
 
         <Menu handleCloseClick={this.toggleMenuVisibility} />
 
@@ -99,8 +107,11 @@ MainLayout.propTypes = {
     PropTypes.node,
   ]),
 };
+
 MainLayout.defaultProps = {
   children: null,
 };
+
+
 
 export default MainLayout;

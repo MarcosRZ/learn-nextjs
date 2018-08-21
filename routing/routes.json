@@ -2,7 +2,16 @@
   {
     "key": "home",
     "pattern": "/",
-    "target": "/Home"
+    "target": "/Home",
+
+    "props": {
+      "title": "H O M E",
+      "o": {
+        "buat": {
+          "de": "fac"
+        }
+      }
+    }
   },
   {
     "key": "generic",
@@ -13,5 +22,32 @@
     "key": "elements",
     "pattern": "/elements",
     "target": "/Elements"
+  },
+  {
+    "key": "professional",
+    "pattern": "/professional",
+    "target": "/Professional",
+    "props": {
+      "title":"P R O F E S S I O N A L"
+    }
+  },
+  {
+    "key": "academic",
+    "pattern": "/academic",
+    "target": "/Academic",
+    "props": {
+      "title":"A C A D E M I C"
+    }
+
+  },
+  {
+    "key": "techs",
+    "pattern": "/techs",
+    "target": "/Techs"
+  },
+  {
+    "key": "projects",
+    "pattern": "/projects",
+    "target": "/Projects"
   }
 ]

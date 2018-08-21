@@ -1,4 +1,5 @@
 import { parse } from 'url';
+import Router from 'next/router';
 import routes from './routes.json';
 
 const SEGMENT_TYPES = {
@@ -7,8 +8,8 @@ const SEGMENT_TYPES = {
 };
 
 const paramRegexPattern = '([A-Za-z0-9-_#$~%]+)';
-const singleParamRegex = /\[(\w+)\]/;   // -> Not /g(lobal)
-const paramsRegex = /\[(\w+)\]/g;       // -> /g(lobal) 
+const singleParamRegex = /\[(\w+)\]/; // -> Not /g(lobal)
+const paramsRegex = /\[(\w+)\]/g; // -> /g(lobal)
 const slashRegex = /\//g;
 const slashRegexPattern = '\\/';
 
@@ -72,28 +73,75 @@ const parsedRoutes = parseRoutes();
 
 function processRoute(url) {
 
-    const parsedUrl = parse(url, true);
+  const parsedUrl = parse(url, true);
 
-    const { pathname, query } = parsedUrl;
+  const { pathname, query } = parsedUrl;
 
   const matched = parsedRoutes.filter(r => r.regex.test(pathname));
 
   if (matched.length > 0) {
-
     const selectedRoute = matched[0];
 
     const routeResult = {
       ...selectedRoute,
-      params: { ...query, ...extractParams(url, selectedRoute.segments)},
+      params: {
+        ...query,
+        ...extractParams(url, selectedRoute.segments),
+        ...selectedRoute.props,
+      },
     };
 
     return routeResult;
   }
 
-  // No match, Sad tinder panda 8( -> Hope NextJS will handle it...
   return null;
+}
+
+function getQuery(request) {
+  console.log(process.browser ? 'IsBrowser' : 'IsServer');
+
+  if (request && request.url)
+    console.log('Request:', request.url);
+
+  let props = {};
+
+  if (
+    request &&
+    request.query
+  ) {
+    props = { ...props, ...request.query };
+  }
+
+  if (process.browser && Router && Router.router && Router.router.query) {
+    console.log('Browser Query: ', Router.router.query)
+    props = { ...props, ...Router.router.query };
+  }
+
+  console.log('GetInitialProps: ', props); 
+  console.log('Router: ', Router);
+
+
+  console.log('Return value: ', props);
+
+  return props;
+  // if (!request && !Router) return {};
+
+  // if (request && request.query && request.query.data) {
+  //   return JSON.parse(request.query.data);
+  // }
+
+  // if (request && request.query) {
+  //   return request.query;
+  // }
+
+  // if (process.browser && Router && Router.query && Router.query.data) {
+  //   return JSON.parse(Router.query.data);
+  // }
+
+  // return process.browser && Router && Router.query && Router.query.data ? JSON.parse(Router.query.data) : request && request.query;
 }
 
 export default {
   processRoute,
+  getQuery,
 };

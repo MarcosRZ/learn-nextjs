@@ -16,21 +16,36 @@ const Menu = props => {
             </Xlink>
           </li>
           <li>
-            <Xlink href="/generic" prefetch>
-              <a>Generic</a>
+            <Xlink href="/professional" prefetch>
+              <a>Professional</a>
             </Xlink>
           </li>
           <li>
-            <Xlink href="/elements" prefetch>
-              <a>Elements</a>
+            <Xlink href="/academic" prefetch>
+              <a>Academic</a>
             </Xlink>
           </li>
           <li>
+            <Xlink href="/techs" prefetch>
+              <a>Techs</a>
+            </Xlink>
+          </li>
+          <li>
+            <Xlink href="/projects" prefetch>
+              <a>Projects</a>
+            </Xlink>
+          </li>
+          <li>
+            <Xlink href="/contact" prefetch>
+              <a>Contact</a>
+            </Xlink>
+          </li>
+          {/* <li>
             <a href="#">Log In</a>
           </li>
           <li>
             <a href="#">Sign Up</a>
-          </li>
+          </li> */}
         </ul>
         <a role="presentation" className="close" onClick={handleCloseClick}>
           Close

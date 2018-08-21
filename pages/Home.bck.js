@@ -1,4 +1,6 @@
 import React from 'react';
+import Head from 'next/head';
+import PropTypes from 'prop-types';
 import withMainLayout from '../HOC/withMainLayout';
 import Section from '../components/Section';
 import SectionSummary from '../components/SectionSummary';
@@ -12,10 +14,14 @@ class Home extends React.PureComponent {
   componentDidMount() {}
 
   render() {
+    const { title } = 'Buatdefac';
+
     return (
       <div>
+        <Head>
+          <title>{title}</title>
+        </Head>
         <div id="page-wrapper">
-
           <Banner />
 
           <section id="wrapper">
@@ -94,14 +100,14 @@ class Home extends React.PureComponent {
               </SectionHeading>
 
               <Cards>
-                <Card 
+                <Card
                   title="Sed feugiat lorem"
                   content="Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices."
                   linkText="Link text one"
                   linkUrl="/generic"
                   imageUrl="static/images/pic04.jpg"
                 />
-                <Card 
+                <Card
                   title="Nisl placerat"
                   content="Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id
                   nulla dignissim dapibus ultrices. Lorem ipsum dolor sit amet,
@@ -117,7 +123,7 @@ class Home extends React.PureComponent {
                   linkUrl="/generic"
                   imageUrl="static/images/pic05.jpg"
                 />
-                <Card 
+                <Card
                   title="Ante fermentum"
                   content="Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id
                   nulla dignissim dapibus ultrices. Lorem ipsum dolor sit amet,
@@ -128,7 +134,7 @@ class Home extends React.PureComponent {
                   linkUrl="/generic"
                   imageUrl="static/images/pic06.jpg"
                 />
-                <Card 
+                <Card
                   title="Fusce consequat"
                   content="Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id
                   nulla dignissim dapibus ultrices."
@@ -146,6 +152,12 @@ class Home extends React.PureComponent {
   }
 }
 
-Home.propTypes = {};
+Home.propTypes = {
+  title: PropTypes.string,
+};
+
+Home.defaultProps = {
+  title: 'Untitled'
+}
 
 export default withMainLayout(Home);

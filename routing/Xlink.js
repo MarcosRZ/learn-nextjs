@@ -27,7 +27,7 @@ class XLink extends PureComponent {
               pathname: selectedRoute ? selectedRoute.target : href,
               query: {
                 data: selectedRoute
-                  ? JSON.stringify(selectedRoute.params)
+                  ? selectedRoute.props
                   : null,
               },
             }}
@@ -49,7 +49,7 @@ class XLink extends PureComponent {
         : React.cloneElement(children, { ...otherProps, href });
     } catch (err) {
 
-      console.error('X Router error: ', err.message)
+      // console.warn('X Router error: ', err.message)
       return React.cloneElement(children, { ...otherProps, href: '/es/error' });
     }
   }
