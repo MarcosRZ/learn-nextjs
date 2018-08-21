@@ -62,6 +62,10 @@ class MainLayout extends PureComponent {
       isPreload ? 'is-preload' : ''
     }`;
 
+    let { title } = this.props;
+
+    if (!title) { title = 'Untitled'};
+
     return (
       <div id="main-layout" className={`main-layout ${menuClass}`}>
         <Head>
@@ -70,7 +74,7 @@ class MainLayout extends PureComponent {
             content="width=device-width, initial-scale=1, user-scalable=no"
           />
           <meta charSet="utf-8" />
-          <title>P1x3L SuSH1</title>
+          <title>{title}</title>
           <link rel="stylesheet" type="text/css" href="/static/css/main.css" />
           <link
             rel="shortcut icon"
@@ -102,6 +106,7 @@ class MainLayout extends PureComponent {
 }
 
 MainLayout.propTypes = {
+  title: PropTypes.string,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
@@ -110,6 +115,7 @@ MainLayout.propTypes = {
 
 MainLayout.defaultProps = {
   children: null,
+  title: null,
 };
 
 

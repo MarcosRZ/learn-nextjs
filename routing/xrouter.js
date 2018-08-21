@@ -72,7 +72,6 @@ function parseRoutes() {
 const parsedRoutes = parseRoutes();
 
 function processRoute(url) {
-
   const parsedUrl = parse(url, true);
 
   const { pathname, query } = parsedUrl;
@@ -84,10 +83,10 @@ function processRoute(url) {
 
     const routeResult = {
       ...selectedRoute,
-      params: {
+      props: {
+        ...selectedRoute.props,
         ...query,
         ...extractParams(url, selectedRoute.segments),
-        ...selectedRoute.props,
       },
     };
 
@@ -98,47 +97,23 @@ function processRoute(url) {
 }
 
 function getQuery(request) {
-  console.log(process.browser ? 'IsBrowser' : 'IsServer');
-
-  if (request && request.url)
-    console.log('Request:', request.url);
 
   let props = {};
 
-  if (
-    request &&
-    request.query
-  ) {
-    props = { ...props, ...request.query };
+  if (request && request.url){ props = {...props, ...request.url.props }; }
+
+  if (request && request.query && request.query.data) {
+    const data = JSON.parse(request.query.data);
+    props = { ...props, ...data };
   }
 
-  if (process.browser && Router && Router.router && Router.router.query) {
-    console.log('Browser Query: ', Router.router.query)
-    props = { ...props, ...Router.router.query };
+  // Server Side Only
+  if (!process.browser && request && request.query){
+    props = {...props, ...request.query };
   }
-
-  console.log('GetInitialProps: ', props); 
-  console.log('Router: ', Router);
-
-
-  console.log('Return value: ', props);
 
   return props;
-  // if (!request && !Router) return {};
 
-  // if (request && request.query && request.query.data) {
-  //   return JSON.parse(request.query.data);
-  // }
-
-  // if (request && request.query) {
-  //   return request.query;
-  // }
-
-  // if (process.browser && Router && Router.query && Router.query.data) {
-  //   return JSON.parse(Router.query.data);
-  // }
-
-  // return process.browser && Router && Router.query && Router.query.data ? JSON.parse(Router.query.data) : request && request.query;
 }
 
 export default {

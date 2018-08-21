@@ -25,11 +25,7 @@ class XLink extends PureComponent {
   
             href={{
               pathname: selectedRoute ? selectedRoute.target : href,
-              query: {
-                data: selectedRoute
-                  ? selectedRoute.props
-                  : null,
-              },
+              query: {data: selectedRoute ? JSON.stringify(selectedRoute.props) : null },
             }}
             prefetch={prefetch}
             as={selectedRoute.currentUrl || href}

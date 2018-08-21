@@ -27,8 +27,10 @@ app.prepare().then(() => {
 
     const target = Router.processRoute(req.url);
 
+    console.log('TARGET: ', target);
+
     if (target) {
-      app.render(req, res, target.target, target.params);
+      app.render(req, res, target.target, target.props);
     } else {
       app.getRequestHandler()(req, res, req.url);
     }

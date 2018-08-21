@@ -3,32 +3,32 @@
     "key": "home",
     "pattern": "/",
     "target": "/Home",
-
     "props": {
-      "title": "H O M E",
-      "o": {
-        "buat": {
-          "de": "fac"
-        }
-      }
+      "title": "Home"
     }
   },
   {
     "key": "generic",
     "pattern": "/generic",
-    "target": "/Generic"
+    "target": "/Generic",
+    "props": {
+      "title": "Generic"
+    }
   },
   {
     "key": "elements",
     "pattern": "/elements",
-    "target": "/Elements"
+    "target": "/Elements",
+    "props": {
+      "title": "Elements"
+    }
   },
   {
     "key": "professional",
     "pattern": "/professional",
     "target": "/Professional",
     "props": {
-      "title":"P R O F E S S I O N A L"
+      "title": "Professional"
     }
   },
   {
@@ -36,18 +36,23 @@
     "pattern": "/academic",
     "target": "/Academic",
     "props": {
-      "title":"A C A D E M I C"
+      "title": "Academic"
     }
-
   },
   {
     "key": "techs",
     "pattern": "/techs",
-    "target": "/Techs"
+    "target": "/Techs",
+    "props": {
+      "title": "Techs"
+    }
   },
   {
     "key": "projects",
     "pattern": "/projects",
-    "target": "/Projects"
+    "target": "/Projects",
+    "props": {
+      "title": "Projects"
+    }
   }
 ]

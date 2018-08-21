@@ -1,27 +1,19 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import Head from 'next/head';
 import withMainLayout from '../HOC/withMainLayout';
 import Section from '../components/Section';
 import SectionSummary from '../components/SectionSummary';
 import Banner from '../components/Banner';
-import Router from '../routing/xrouter';
 
 class Home extends React.PureComponent {
-  componentDidMount() {
-    Router.getQuery();
+
+  constructor(props) {
+    super(props);
+    this.state = {};
   }
-
+  
   render() {
-
-    const { title } = this.props;
-
     return (
       <div>
-        <Head>
-          <title>{title}</title>
-        </Head>
-
         <div id="page-wrapper">
           <Banner>
             <h2>Marcos Rodríguez Martínez</h2>
@@ -60,12 +52,8 @@ class Home extends React.PureComponent {
   }
 }
 
-Home.propTypes = {
-  title: PropTypes.string,
-};
+Home.propTypes = {};
 
-Home.defaultProps = {
-  title: ''
-};
+Home.defaultProps = {};
 
 export default withMainLayout(Home);
