@@ -2725,8 +2725,12 @@ button,
   border-radius: 5px;
   box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.125);
   padding: 0 1.35em;
-  margin-right: 17px;
   cursor: pointer;
+}
+@media screen and (min-width: 481px) {
+  #header nav a[data-behaviour=menu-button] {
+    margin-right: 17px;
+  }
 }
 #header nav a[data-behaviour=menu-button]:before {
   -moz-osx-font-smoothing: grayscale;

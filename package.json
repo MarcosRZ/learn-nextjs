@@ -15,6 +15,7 @@
   },
   "scripts": {
     "dev": "cross-env BABEL_DISABLE_CACHE=1 NODE_ENV=dev babel-node server.js",
+    "compile": "rm -rf .compiled && babel src --out-dir .compiled/src",
     "generateLocales": "cross-env NODE_ENV=dev babel-node generateLocales.js",
     "build": "next build",
     "deploy": "npm run buildCSS; cd .deploy; mupx deploy; cd ..",
