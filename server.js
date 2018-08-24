@@ -21,13 +21,7 @@ function logBootInfo() {
 
 app.prepare().then(() => {
   createServer((req, res) => {
-    // const parsedUrl = parse(req.url, true);
-
-    // const { pathname, query } = parsedUrl;
-
     const target = Router.processRoute(req.url);
-
-    console.log('TARGET: ', target);
 
     if (target) {
       app.render(req, res, target.target, target.props);

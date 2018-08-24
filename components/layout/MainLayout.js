@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Header from './Header';
 import Menu from './Menu';
 import Footer from './Footer';
+import { APP_NAME } from '../../config/app';
 
 const SHOW_BANNER_DELAY_MS = 100;
 const SHOW_MENU_OFFSET_PX = 100;
@@ -22,12 +23,18 @@ class MainLayout extends PureComponent {
   }
 
   componentDidMount() {
-    setTimeout(this.startAnimations, SHOW_BANNER_DELAY_MS);
+    this.animationTimeout = setTimeout(
+      this.startAnimations,
+      SHOW_BANNER_DELAY_MS,
+    );
     window.addEventListener('scroll', this.onScroll, true);
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.onScroll);
+    if (this.animationTimeout) {
+      clearTimeout(this.animationTimeout);
+    }
+    window.removeEventListener('scroll', this.onScroll, true);
   }
 
   onScroll(event) {
@@ -43,7 +50,6 @@ class MainLayout extends PureComponent {
 
     this.setState({ showHeader: px > SHOW_MENU_OFFSET_PX });
   }
-
 
   startAnimations() {
     this.setState({ isPreload: false });
@@ -64,7 +70,7 @@ class MainLayout extends PureComponent {
 
     let { title } = this.props;
 
-    if (!title) { title = 'Untitled'};
+    title = `${APP_NAME} - ${title}`;
 
     return (
       <div id="main-layout" className={`main-layout ${menuClass}`}>
@@ -117,7 +123,5 @@ MainLayout.defaultProps = {
   children: null,
   title: null,
 };
-
-
 
 export default MainLayout;

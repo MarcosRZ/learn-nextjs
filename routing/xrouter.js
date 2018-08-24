@@ -1,5 +1,4 @@
 import { parse } from 'url';
-import Router from 'next/router';
 import routes from './routes.json';
 
 const SEGMENT_TYPES = {
