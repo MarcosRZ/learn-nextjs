@@ -19,6 +19,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var port = parseInt(process.env.PORT, 10) || 3000; /* eslint no-console: "off" */
 
 var dev = process.env.NODE_ENV !== 'production';
+console.log('ENV: ' + process.env.NODE_ENV);
 var app = (0, _next2.default)({ dev: dev });
 
 function logBootInfo() {

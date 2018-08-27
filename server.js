@@ -7,6 +7,7 @@ import { APP_NAME, APP_AUTHOR, AUTHOR_GITHUB } from './config/app';
 
 const port = parseInt(process.env.PORT, 10) || 3000;
 const dev = process.env.NODE_ENV !== 'production';
+console.log(`ENV: ${process.env.NODE_ENV}`);
 const app = next({ dev });
 
 function logBootInfo() {

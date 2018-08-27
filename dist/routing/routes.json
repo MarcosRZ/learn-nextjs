@@ -1,0 +1,58 @@
+[
+  {
+    "key": "home",
+    "pattern": "/",
+    "target": "/Home",
+    "props": {
+      "title": "Home"
+    }
+  },
+  {
+    "key": "generic",
+    "pattern": "/generic",
+    "target": "/Generic",
+    "props": {
+      "title": "Generic"
+    }
+  },
+  {
+    "key": "elements",
+    "pattern": "/elements",
+    "target": "/Elements",
+    "props": {
+      "title": "Elements"
+    }
+  },
+  {
+    "key": "professional",
+    "pattern": "/professional",
+    "target": "/Professional",
+    "props": {
+      "title": "Professional"
+    }
+  },
+  {
+    "key": "academic",
+    "pattern": "/academic",
+    "target": "/Academic",
+    "props": {
+      "title": "Academic"
+    }
+  },
+  {
+    "key": "techs",
+    "pattern": "/techs",
+    "target": "/Techs",
+    "props": {
+      "title": "Techs"
+    }
+  },
+  {
+    "key": "projects",
+    "pattern": "/projects",
+    "target": "/Projects",
+    "props": {
+      "title": "Projects"
+    }
+  }
+]

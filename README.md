@@ -5,8 +5,22 @@ My [Zeit's NextJS tutorial](https://nextjs.org/learn/) implementation, with **ba
 ```sh
 $ npm i
 ```
-### Run
+
+### Generate production build
+```sh
+$ gulp build
+```
+
+### Run (Development mode)
 ```sh
 $ npm run dev
+```
+
+### Run (Production mode)
+```sh
+$ gulp build
+$ cd /dist
+$ npm i
+$ npm run prod
 ```
 See _package.json_ scripts section for more information

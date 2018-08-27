@@ -11,18 +11,16 @@
     "start2": "cross-env NODE_ENV=production PORT=80 babel-node server.js",
     "compile": "rm -rf .compiled && babel src --out-dir .compiled/src",
     "buildCSS": "stylus -u autoprefixer-stylus ./styles/main.styl -o ./static/main.css",
-    "devCSS": "stylus -u autoprefixer-stylus -w ./styles/main.styl -o ./static/main.css"
+    "devCSS": "stylus -u autoprefixer-stylus -w ./styles/main.styl -o ./static/main.css",
+    "generateLocales": "cross-env NODE_ENV=dev babel-node generateLocales.js",
+    "deploy": "npm run buildCSS; cd .deploy; mupx deploy; cd .."
   },
   "scripts": {
     "dev": "cross-env BABEL_DISABLE_CACHE=1 NODE_ENV=dev babel-node server.js",
-    "compile": "rm -rf .compiled && babel src --out-dir .compiled/src",
-    "generateLocales": "cross-env NODE_ENV=dev babel-node generateLocales.js",
-    "build": "next build",
-    "deploy": "npm run buildCSS; cd .deploy; mupx deploy; cd ..",
+    "prod": "cross-env NODE_ENV=production node server.js",
+    "build": "rm -rf .next && next build",
     "cleanCaches": "rm -rf .next && npm cache clean --force && rm -rf node_modules/.cache/* && npm i",
-    "startLocal": " NODE_ENV=production PORT=3005 babel-node server.js",
-    "next-start": "next start",
-    "start": "cross-env NODE_ENV=production PORT=80 babel-node server.js",
+    "next:start": "next start",
     "cleanCache": "rm -rf node_modules/.cache",
     "buildCSS": "sass static/sass/main.scss static/css/main.css"
   },
@@ -37,7 +35,6 @@
     "apollo-client": "^2.0.0-rc.7",
     "apollo-link-http": "^1.5.4",
     "cookies-js": "^1.2.3",
-    "cross-env": "^5.2.0",
     "graphql": "^0.13.2",
     "graphql-tag": "^2.9.2",
     "isomorphic-fetch": "^2.2.1",
@@ -59,6 +56,8 @@
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.7.0",
+    "cross-env": "^5.2.0",
+    "del": "^3.0.0",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^17.0.0",
     "eslint-config-prettier": "^2.9.0",
@@ -70,6 +69,7 @@
     "gulp-babel": "^7.0.1",
     "gulp-run": "^1.7.1",
     "gulp-sftp": "^0.1.5",
-    "nodemon": "^1.18.3"
+    "nodemon": "^1.18.3",
+    "run-sequence": "^2.2.1"
   }
 }
