@@ -7,36 +7,36 @@ var sftp = require('gulp-sftp');
 var del = require('del');
 var runSequence = require('run-sequence');
 
-
 const USER = 'root'
 const SERVER_NAME = 'marcosrgz.com';
 const TARGET_PATH = '/root/apps/app1';
 
 const transpile = ['server.js', 'routing/*.js', 'config/*.js'];
-const copy = ['.next/**', 'package.json', 'routing/routes.json', 'static/**'];
+const copy = ['.next/**', 'package.json', 'routing/routes.json', 'static/css','static/fonts', 'static/images', 'static/js'];
 
-gulp.task('default', function() {
-  // place code for your default task here
-  console.log('Hello gulp!');
-})
-
-
+// Full build process execution.
+// Tasks (in order): clean -> next-build -> transpile -> copy
+// Once this task is completed, there is an executable next project inside dist/
 gulp.task('build', function(done){
-  console.log('Building...')
-  runSequence('clean', 'next-build', 'transpile', 'copy', function(){
-    console.log('DONE!');
+  runSequence('clean', 'build:next','build:css', 'transpile', 'copy', function(){
     done();
   })
 });
 
 // Deletes all dist/ contents
 gulp.task('clean', () => {
-  return del('dist/*/**');
+  del('dist/*');
+  del('dist/.*');
 });
 
 // builds .next folder (next build)
-gulp.task('next-build', () => {
+gulp.task('build:next', () => {
   return run('npm run build').exec();
+});
+
+// builds css from sass
+gulp.task('build:css', () => {
+  return run('npm run buildCSS').exec();
 });
 
 // Copies files listed in 'copy' array. (See the top of this file)
